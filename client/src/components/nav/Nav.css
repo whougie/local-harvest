@@ -1,0 +1,17 @@
+nav {
+  font-size:30px;
+  display: flex;
+  height: 50%;
+  flex-direction: row;
+  margin-right: 10px;
+  justify-content:end;
+ 
+}
+
+.navigation a {
+  color: #e1e1e1;
+  text-decoration: none;
+  justify-content: space-around;
+  margin-top: 50px;
+  padding: 10px
+}

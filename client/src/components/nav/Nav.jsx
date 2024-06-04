@@ -9,7 +9,8 @@ export default function Nav() {
   return (
     <>
       <nav className="navigation">
-        <NavLink to = '/'>About</NavLink>
+        <NavLink to = '/'>Home</NavLink>
+        <NavLink to = '/about'>About</NavLink>
         <NavLink to = '/market'>Market</NavLink>
         <NavLink to = '/auth'>Auth</NavLink>
         <NavLink to = '/involvement'>Get Involved</NavLink>
