@@ -1,0 +1,28 @@
+nav {
+  font-size:30px;
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  margin-right: 100px;
+  align-items:end;
+  justify-content: center;
+ 
+}
+
+.navigation a {
+  color: #e1e1e1;
+  text-decoration: none;
+  /* margin-top: 50px; */
+  padding: 20px;
+  
+}
+
+.auth a {
+  color: #e1e1e1;
+  text-decoration: none;
+  margin-right: 100px;
+  padding: 20px;
+  
+
+
+}
