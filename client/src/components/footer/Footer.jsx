@@ -2,16 +2,18 @@ import React from 'react'
 import './Footer.css';
 
 
-export default function Footer(){
+export default function Footer() {
 
-  return(
+  return (
 
     <>
-     <footer className='footer'>
-      <a href="https://github.com/JoelhansenMN" target='_blank'><img src="/projectImages/github.png" alt="github logo" className='logos'/></a>
-      <a href="https://www.instagram.com/jth22/" target='_blank'><img src="/projectImages/insta.png" alt="insta logo" className='logos' /></a>
-      <a href="https://www.linkedin.com/in/joel-hansen-msw-053b638a/" target='_blank'><img src="/projectImages/linkedin.png" alt="linkedin logo" className='logos'/></a>
-     </footer>
+      <footer className='footer'>
+        <container className='images'>
+          <img src="https://seeklogo.com/images/C/chs-logo-8964FB82D2-seeklogo.com.png" alt="chs logo" className='logos' />
+          <img src="https://seeklogo.com/images/C/cargill-logo-D7CF92C2CC-seeklogo.com.png" alt="chs logo" className='logos' />
+        </container>
+
+      </footer>
     </>
   )
 }
