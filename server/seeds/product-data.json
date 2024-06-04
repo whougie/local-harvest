@@ -1,0 +1,103 @@
+[
+    {
+      "name": "Sunflowers",
+      "price_range": "$1 - $3 per stem",
+      "image_url": ""
+    },
+    {
+      "name": "Lavender",
+      "price_range": "$5 - $10 per bunch",
+      "image_url": ""
+    },
+    {
+      "name": "Roses",
+      "price_range": "$2 - $5 per stem or $10 - $20 per bouquet",
+      "image_url": ""
+    },
+    {
+      "name": "Geraniums",
+      "price_range": "$4 - $8 per pot",
+      "image_url": ""
+    },
+    {
+      "name": "Mint Plant",
+      "price_range": "$3 - $5 per pot",
+      "image_url": ""
+    },
+    {
+      "name": "Strawberries",
+      "price_range": "$3 - $5 per pint",
+      "image_url": ""
+    },
+    {
+      "name": "Apples",
+      "price_range": "$1.50 - $3 per pound",
+      "image_url": ""
+    },
+    {
+      "name": "Pears",
+      "price_range": "$1.50 - $3 per pound",
+      "image_url": ""
+    },
+    {
+      "name": "Watermelon",
+      "price_range": "$3 - $7 each",
+      "image_url": ""
+    },
+    {
+      "name": "Cantaloupe",
+      "price_range": "$3 - $5 each",
+      "image_url": ""
+    },
+    {
+      "name": "Raspberries",
+      "price_range": "$4 - $6 per pint",
+      "image_url": ""
+    },
+    {
+      "name": "Honey",
+      "price_range": "$8 - $15 per jar (8-16 ounces)",
+      "image_url": ""
+    },
+    {
+      "name": "Strawberry Jam",
+      "price_range": "$5 - $8 per jar (8-12 ounces)",
+      "image_url": ""
+    },
+    {
+      "name": "Tomatoes",
+      "price_range": "$2.50 - $4 per pound",
+      "image_url": ""
+    },
+    {
+      "name": "Lettuce",
+      "price_range": "$1.50 - $3 per head",
+      "image_url": ""
+    },
+    {
+      "name": "Carrots",
+      "price_range": "$1.50 - $2.50 per bunch",
+      "image_url": ""
+    },
+    {
+      "name": "Potatoes",
+      "price_range": "$1 - $2 per pound",
+      "image_url": ""
+    },
+    {
+      "name": "Onions",
+      "price_range": "$1 - $2 per pound",
+      "image_url": ""
+    },
+    {
+      "name": "Parsley",
+      "price_range": "$1.50 - $2.50 per bunch",
+      "image_url": ""
+    },
+    {
+      "name": "Cabbage",
+      "price_range": "$1.50 - $3 per head",
+      "image_url": ""
+    }
+  ]
+  
