@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-size: 100%, 100%;
   background-position: center;
+  background-size: cover;
  
 }
 
@@ -21,9 +22,11 @@
 }
 
 .aboutBody {
-  font-size: 20px;
+  font-size: 25px;
   justify-content: center;
   color: #e1e1e1;
+  margin: 20px;
+  padding: 5px;
 }
 
 
@@ -31,6 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
+  justify-content: space-between;
 
 }
 
@@ -44,7 +48,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  margin: 20px;
+  margin: 15px;
 }
 
 /* Display the columns below each other instead of side by side on small screens */
