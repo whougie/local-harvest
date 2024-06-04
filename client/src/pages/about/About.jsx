@@ -9,8 +9,9 @@ return(
   <section className='story'>
   <h1 className='aboutTitle'>Our Team</h1>
 
-  <p className='aboutBody'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam impedit molestias eveniet obcaecati aliquam animi sequi. Provident, animi reprehenderit, debitis accusantium laboriosam vel sit modi eligendi reiciendis non ullam fuga?</p>
+  <p className='aboutBody'>Welcome to Local Harvest, your online access to your local farmers market!  Local Harvest was founded in the spring 2024 (right at the start of the growing season) by a team of web developers at the University of Minnesota. A shared love of healthy, locally grown foods and the realization that getting to our local farmer's market as often as we'd like was not always possible; the idea for Local Harvest was born.</p>
 
+  <p className='aboutBody'>By becoming a member, you now can have access to every vendor at your local market; order online, and quickly pick up your items on your time.  As much fun as it can be to spend a few hours browsing the stands; busy schedules, family time, mobility issues and event the weather can impact getting there.  Local Harvest aims to connect farmer's with consumers with a little more ease.  Thanks for checking us out and happy harvesting! </p>
   </section>
 
   <section className='about'>
