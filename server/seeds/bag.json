@@ -1,0 +1,65 @@
+[
+    {
+        "id": "123abc",
+        "total": 66,
+        "isBagCheckedOut": "false"
+    },
+    {
+        "productPurchased": {
+            "id": "abc123"
+        }
+    },
+    {
+        "user": {
+            "id": "789",
+            "firstname": "John",
+            "lastname": "Wick",
+            "email": "john@gmail.com"
+        }
+    },
+    {
+        "id": "9",
+        "name": "Watermelon",
+        "price": "$4",
+        "qty": 30
+    },
+    {
+        "qtyPurchased": 3
+    },
+    {
+        "id": "3",
+        "name": "Roses",
+        "price": "$10",
+        "qty": 30
+    },
+    {
+        "qtyPurchased": 1
+    },
+    {
+        "id": "12",
+        "name": "Honey",
+        "price": "$8",
+        "qty": 15
+    },
+    {
+        "qtyPurchased": 3
+    },
+    {
+        "id": "6",
+        "name": "Strawberries",
+        "price": "$5",
+        "qty": 20
+    },
+    {
+        "qtyPurchased": 2
+    },
+    {
+        "id": "11",
+        "name": "Raspberries",
+        "price": "$5",
+        "qty": 20
+    },
+    {
+        "qtyPurchased": 2
+    }
+]
