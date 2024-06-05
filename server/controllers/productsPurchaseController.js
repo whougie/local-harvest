@@ -12,9 +12,6 @@ module.exports = {
         },
         {
           path: "purchase.product"  
-        },
-        {
-          // need for testing
         }
        ]);
       res.json(productsPurchases);
