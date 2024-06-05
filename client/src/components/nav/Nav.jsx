@@ -23,6 +23,7 @@ export default function Nav() {
         <div className='auth'>
           <NavLink to='/auth'>Become A Member</NavLink>
           <NavLink to='/auth'>Login</NavLink>
+          <NavLink to='/auth'>Logout</NavLink>
         </div>
       </nav>
 

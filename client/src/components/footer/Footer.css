@@ -18,8 +18,8 @@
 } */
 
 .logos {
-  height: 50px;
-  width: 75px;
+  height: 5rem;
+  width: 6rem;
   margin: 5px;
 
 }
@@ -33,4 +33,9 @@
   color: #e1e1e1;
   margin: 40px;
   font-size: 20px;
+}
+
+.footerImages {
+  display:flex;
+  flex-wrap: wrap;
 }
