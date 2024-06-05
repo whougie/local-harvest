@@ -1,0 +1,44 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin:2%;
+  border: 2px solid black;
+  background-image: url(/images/homepage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.border {
+  display: flex;
+  text-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: #e1e1e1;
+  height: 10rem;
+  width:auto;
+  padding: 10px;
+}
+
+.harvest {
+  font-size: 2rem;
+  color: black;
+  padding: 5%;
+}
+
+.farm {
+  font-size: 1.5rem;
+  color: black;
+ 
+}
+
+.homeImg {
+  margin: 1rem;
+  height: 25rem;
+  width: 25rem;
+
+}

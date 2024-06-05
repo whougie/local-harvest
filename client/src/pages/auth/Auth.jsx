@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import "./Auth.css"
 
 
 
@@ -69,10 +70,10 @@ export default function AuthPage(){
 
 
   return (
-    <div>
+    <div className='authBody'>
 
-      <h2>SignupForm</h2>
-      <form onSubmit={handleSignup}>
+      <h2 className='authTitle'>SignupForm</h2>
+      <form onSubmit={handleSignup} className='authform'>
         <label>Email</label>
         <input type="text" name="signupEmail" value={formData.signupEmail} onChange={handleInputChange} />
 
@@ -83,8 +84,8 @@ export default function AuthPage(){
       </form>
 
 
-      <h2>Login Form</h2>
-      <form onSubmit={handleLogin}>
+      <h2 className='authTitle'>Login Form </h2>
+      <form onSubmit={handleLogin} className='loginForm'>
         <label>Email</label>
         <input type="text" name="loginEmail" value={formData.loginEmail} onChange={handleInputChange} />
 
