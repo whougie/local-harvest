@@ -11,6 +11,7 @@ return(
     <div className='border'>
     <h1 className="harvest">Local Harvest</h1>
       <h3 className="farm">Bringing the Farm...to your Table in one quick stop!  </h3>
+      <img src="../public/images/localHarvestLogo.png" alt="LHLogo"  className='lhLogo'/>
       </div>
  </div>
 

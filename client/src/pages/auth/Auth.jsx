@@ -68,19 +68,42 @@ export default function AuthPage(){
     }
   }
 
+   // Function to handle User logout
+   async function handleLogout(event) {
+    event.preventDefault()
+    try {
+      const response = await fetch("/api/user/logout", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        // Clear any client-side stored data (e.g., tokens)
+        clearForms();
+        navigate("/home"); // Redirect to the home page after logout
+      } else {
+        throw new Error('Logout failed');
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
 
   return (
     <div className='authBody'>
 
       <h2 className='authTitle'>SignupForm</h2>
-      <form onSubmit={handleSignup} className='authform'>
+      <form onSubmit={handleSignup} className='authForm'>
+      
         <label>Email</label>
         <input type="text" name="signupEmail" value={formData.signupEmail} onChange={handleInputChange} />
 
         <label>Password</label>
         <input type="password" name="signupPassword" value={formData.signupPassword} onChange={handleInputChange} />
 
-        <button type="submit">Submit</button>
+        <button type="submit" className='authBtn'>Submit</button>
       </form>
 
 
@@ -92,7 +115,11 @@ export default function AuthPage(){
         <label>Password</label>
         <input type="password" name="loginPassword" value={formData.loginPassword} onChange={handleInputChange} />
 
-        <button type="submit">Submit</button>
+        <button type="submit" className='authBtn'>Submit</button>
+      </form>
+
+      <form id="logoutForm" onSubmit={handleLogout} className='logoutForm'>
+        <button type="submit" className='authBtn'>Logout</button>
       </form>
 
     </div>
