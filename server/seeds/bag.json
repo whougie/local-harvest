@@ -1,0 +1,61 @@
+
+[
+   {
+        "id": "789",
+        "firstname":"John",
+        "namelast":"Wick",
+        "email": "john@gmail.com"
+    },
+
+    {
+        "id":"9",
+        "name":"Watermelon",
+        "price":"$4",
+        "qty":30
+    }, 
+    {
+        "qtyPurchased":3
+    },
+
+    {
+        "id":"3",
+        "name":"Roses",
+        "price":"$10",
+        "qty":30
+    }, 
+    {
+        "qtyPurchased":1
+    },
+
+    {
+        "id":"12",
+        "name":"honey",
+        "price":"$8",
+        "qty":15
+    }, 
+    {
+        "qtyPurchased":3
+    },
+
+    {
+        "id":"6",
+        "name":"strawberrys",
+        "price":"$5",
+        "qty":20
+    }, 
+
+    {
+        "qtyPurchased":2
+    },
+
+    {
+        "id":"11",
+        "name":"Rasberries",
+        "price":"$5",
+        "qty":20
+    }, 
+    {
+        "qtyPurchased":2
+    }
+
+]

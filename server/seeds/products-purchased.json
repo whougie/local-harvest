@@ -1,0 +1,28 @@
+[
+  {
+    "product_id": "9",
+    "product": "watermelon",
+    "qty":3 
+  },
+  {
+    "product_id": "3",
+    "product": "roses",
+    "qty":1 
+  },
+  {
+    "product_id": "12",
+    "product": "honey",
+    "qty":3 
+  },
+  {
+    "product_id": "6",
+    "product": "strawberrys",
+    "qty":3 
+  },
+  {
+    "product_id": "11",
+    "product": "Rasberries",
+    "qty":2
+  }
+] 
+    
