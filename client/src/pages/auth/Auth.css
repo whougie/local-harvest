@@ -1,0 +1,36 @@
+.authBody {
+height: auto;
+width: 100%;
+display: flex;
+border: 1 px solid red;
+background-color: blueviolet;
+flex-direction: column;
+
+}
+
+.authTitle {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  color: #e1e1e1;
+}
+
+.authForm {
+  border: 1 px solid red;
+  height: 800px;
+  width: 200px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+
+.loginForm {
+  border: 1 px solid red;
+  height: 800px;
+  width: 200px;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
