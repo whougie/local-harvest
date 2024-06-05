@@ -53,36 +53,3 @@
 .card-button:hover {
   background-color: #0056b3;
 }
-
-/* Media Queries */
-/* @media only screen and (max-width: 768px) {
-  .card-container {
-    justify-content: center;
-  }
-
-  .card {
-    width: 100%;
-  }
-} */
-
-/* @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .card-container {
-    justify-content: center; 
-  }
-
-  .card {
-    width: 45%; 
-  }
-} */
-
-/* Align cards to the start on larger screens */
-/* @media only screen and (min-width: 1025px) {
-  .card-container {
-    justify-content: flex-start; 
-  } */
-  
- /* Cards take 30% width on laptops and larger screens */
-  /* .card {
-    width: 30%;
-  }
-} */
