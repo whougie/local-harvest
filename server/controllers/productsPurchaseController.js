@@ -10,15 +10,9 @@ module.exports = {
         {
           path: "user"
         },
-        // {
-        //   populate: 
-        //   { // path: "product",
-        //     populate: 
-        //     {
-        //       path: "product"
-        //     }
-        //   }
-        // }
+        {
+          path: "purchase.product"  
+        }
        ]);
       res.json(productsPurchases);
     } catch (err) {
@@ -30,8 +24,16 @@ module.exports = {
   // get single productsPurchase
   async getSingleProductsPurchase(req, res) {
     try {
-      const productsPurchase = await ProductsPurchase.findOne( { _id: req.params.productsPurchaseId }  ).populate('user').populate('product');
-      
+      const productsPurchase = await ProductsPurchase.findOne( { _id: req.params.productsPurchaseId }  ).populate('user').populate(
+        [
+        {
+          path: "user"
+        },
+        {
+          path: "purchase.product"  
+        }
+       ]);
+
       if (!productsPurchase) {
         return res.status(404).json({ message: 'No productsPurchase with that ID' });
       }
