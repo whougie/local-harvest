@@ -25,12 +25,13 @@ margin: 1rem;
 .authForm {
   display: flex;
   height: 18vh;
-  width: 50vw;
+  width: auto;
   margin: 5px;
   justify-content: center;
   align-items: center;
   background-color: #F0F8FF;
   border-radius: 6px;
+  position: relative;
   
 }
 
@@ -38,7 +39,7 @@ margin: 1rem;
   display: flex;
   border: 1 px solid black;
   height: 18vh;
-  width: 50vw;
+  width: auto;
   margin: 5px;
   justify-content: center;
   align-items: center;
