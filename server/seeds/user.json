@@ -1,16 +1,22 @@
 [
     {
     "id": 123,
+    "firstname": "John",
+    "lastname": "Doe",
     "email": "john_doe@gmail.com",
     "password":"Password123"
     },
     {
     "id": 456,
+    "firstname": "Jane",
+    "lastname": "Doe",
     "email": "jane_doe@gmail.com",
     "password":"Password123"
     },
     {
     "id":789,
+    "firstname": "John",
+    "lastname": "Wick",
     "email": "john@gmail.com",
     "password":"Password123"
     }
