@@ -1,5 +1,5 @@
 .involvement-body{
-    background-image: url('../../../public/images/watercolor-involve.png'); 
+    background-image: url('/images/watercolor-involve.png'); 
     background-size: cover; 
     background-position: center;
 }

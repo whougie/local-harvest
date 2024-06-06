@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Involvement.css';
 
 export default function Involvement() {
@@ -13,13 +13,6 @@ export default function Involvement() {
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
-
-  useEffect(() => {
-    const savedFormData = localStorage.getItem('formData');
-    if (savedFormData) {
-      setFormData(JSON.parse(savedFormData));
-    }
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,8 +32,6 @@ export default function Involvement() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Save form data to local storage
-    localStorage.setItem('formData', JSON.stringify(formData));
     // Log form data to console
     console.log('Form Data:', formData);
     // Pretend to submit form
@@ -49,6 +40,7 @@ export default function Involvement() {
 
   return (
     <>
+    <div className="involvement-body">
       <div className="involvement-container">
         {!formSubmitted ? (
           <form onSubmit={handleSubmit} className="involvement-form">
@@ -168,53 +160,54 @@ export default function Involvement() {
                 name="questions"
                 value={formData.questions}
                 onChange={handleChange}
-                ></textarea>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="productImages">Product Images:</label>
-                  <input
-                    type="file"
-                    id="productImages"
-                    name="productImages"
-                    accept="image/*"
-                    onChange={handleImageChange}
-                    multiple
-                    style={{ display: 'none' }}
-                    disabled={formData.productImages.length >= 5}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => document.getElementById('productImages').click()}
-                    disabled={formData.productImages.length >= 5}
-                  >
-                    Add Images
-                  </button>
-                  <div className="image-preview-box">
-                    {formData.productImages.map((image, index) => (
-                      <img
-                        key={index}
-                        src={URL.createObjectURL(image)}
-                        alt={`Product ${index + 1}`}
-                        className="image-thumb"
-                      />
-                    ))}
-                  </div>
-                </div>
-                <button type="submit" style={{ backgroundColor: 'orange', color: 'green' }}>Submit</button>
-              </form>
-            ) : (
-              <div className="submission-message">
-                <p>Thank you for your request! You’ll be contacted within a business day.</p>
-              </div>
-            )}
-            <div className="contact-info">
-              <h3>Contact Information for Local Harvest</h3>
-              <p>Email: contact@localharvest.com</p>
-              <p>Phone: (123) 456-7890</p>
-              <p>Address: 1234 Harvest Lane, Townsville, State, 56789</p>
+                required
+              ></textarea>
             </div>
+            <div className="form-group">
+              <label htmlFor="productImages">Product Images:</label>
+              <input
+                type="file"
+                id="productImages"
+                name="productImages"
+                accept="image/*"
+                onChange={handleImageChange}
+                multiple
+                style={{ display: 'none' }}
+                disabled={formData.productImages.length >= 5}
+              />
+              <button
+                type="button"
+                onClick={() => document.getElementById('productImages').click()}
+                disabled={formData.productImages.length >= 5}
+              >
+                Add Images
+              </button>
+              <div className="image-preview-box">
+                {formData.productImages.map((image, index) => (
+                  <img
+                    key={index}
+                    src={URL.createObjectURL(image)}
+                    alt={`Product ${index + 1}`}
+                    className="image-thumb"
+                  />
+                ))}
+              </div>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        ) : (
+          <div className="submission-message">
+            <p>Thank you for your request! You’ll be contacted within a business day.</p>
           </div>
-        </>
-      );
-    }
-    
+        )}
+        <div className="contact-info">
+          <h3>Contact Information for Local Harvest</h3>
+          <p>Email: contact@localharvest.com</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Address: 1234 Harvest Lane, Townsville, State, 56789</p>
+        </div>
+      </div>
+    </div>
+    </>
+  );
+}
