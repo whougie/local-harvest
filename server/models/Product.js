@@ -8,6 +8,9 @@ const productSchema = new Schema(
       minlength: 1,
       maxlength: 280
     },
+    description: {
+      type: String
+    },
     price: {
       type: Number,
       required: true
