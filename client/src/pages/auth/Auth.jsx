@@ -5,31 +5,39 @@ import "./Auth.css"
 
 
 
-export default function AuthPage(){
+export default function AuthPage() {
 
   const navigate = useNavigate();
 
-  const [ formData, setFormData ] = useState({
-    signupEmail: "", signupPassword: "", loginEmail: "", loginPassword: ""
+  const [formData, setFormData] = useState({
+    firstname: "", lastname: "", signupEmail: "", signupPassword: "", loginEmail: "", loginPassword: ""
   })
 
-  function clearForms(){
+  function clearForms() {
     setFormData({ signupEmail: "", signupPassword: "", loginEmail: "", loginPassword: "" })
   }
 
-  function handleInputChange(event){
+  function handleInputChange(event) {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value
     })
   }
 
-  async function handleSignup(event){
+  async function handleSignup(event) {
     event.preventDefault()
     try {
+      console.log(JSON.stringify({
+        firstname:formData.firstname,
+        lastname: formData.lastname,
+        email: formData.signupEmail,
+        password: formData.signupPassword}))
+      console.log(formData)
       const response = await fetch("/api/users", {
         method: 'POST',
         body: JSON.stringify({
+          firstname:formData.firstname,
+          lastname: formData.lastname,
           email: formData.signupEmail,
           password: formData.signupPassword
         }),
@@ -41,13 +49,13 @@ export default function AuthPage(){
       const result = await response.json()
       clearForms()
       console.log(result)
-    } catch(err){
+    } catch (err) {
       console.log(err.message)
     }
     // display a message to the user
   }
 
-  async function handleLogin(event){
+  async function handleLogin(event) {
     event.preventDefault()
     try {
       const response = await fetch("/api/users/login", {
@@ -62,16 +70,16 @@ export default function AuthPage(){
       })
       const result = await response.json()
       clearForms()
-      if( result.status === 'success' ){
+      if (result.status === 'success') {
         navigate("/market");
       }
-    } catch(err){
+    } catch (err) {
       console.log(err.message)
     }
   }
 
-   // Function to handle User logout
-   async function handleLogout(event) {
+  // Function to handle User logout
+  async function handleLogout(event) {
     event.preventDefault()
     try {
       const response = await fetch("/api/users/logout", {
@@ -96,9 +104,15 @@ export default function AuthPage(){
   return (
     <div className='authBody'>
 
-      <h2 className='authTitle'>SignupForm</h2>
+      <h2 className='authTitle'>Signup Form</h2>
       <form onSubmit={handleSignup} className='authForm'>
-      
+
+        <label>First Name</label>
+        <input type="text" name="firstname" value={formData.firstname} onChange={handleInputChange} />
+
+        <label>Last Name</label>
+        <input type="text" name="lastname" value={formData.lastname} onChange={handleInputChange} />
+
         <label>Email</label>
         <input type="text" name="signupEmail" value={formData.signupEmail} onChange={handleInputChange} />
 
