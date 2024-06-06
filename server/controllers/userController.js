@@ -44,7 +44,8 @@ module.exports = {
   // /api/users
   // Create a user
   async createUser(req, res) {
-    console.log(req)
+    console.log("are you making it")
+    console.log(req.body)
     try {
       const user = await User.create(req.body);
       const token = await createToken(user);
