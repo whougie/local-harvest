@@ -1,65 +1,75 @@
 [
     {
+    
         "id": "123abc",
-        "total": 66,
-        "isBagCheckedOut": "false"
-    },
-    {
-        "productPurchased": {
-            "id": "abc123"
+        
+        "isBagCheckedOut": true,
+    
+    
+        "total": 36,
+    
+    
+        "user":
+        {
+            "_id": "789"
+           
+        },
+    
+    
+        "productPurchased":
+        {
+            "_id":123456
         }
     },
+
+
     {
-        "user": {
-            "id": "789",
-            "firstname": "John",
-            "lastname": "Wick",
-            "email": "john@gmail.com"
+    
+        "id": "456def",
+        
+        "isBagCheckedOut": false,
+    
+    
+        "total": 17.50,
+    
+    
+        "user":
+        {
+            "_id": "789"
+           
+        },
+    
+    
+        "productPurchased":
+        {
+            "_id":67890
         }
     },
+
+
     {
-        "id": "9",
-        "name": "Watermelon",
-        "price": "$4",
-        "qty": 30
-    },
-    {
-        "qtyPurchased": 3
-    },
-    {
-        "id": "3",
-        "name": "Roses",
-        "price": "$10",
-        "qty": 30
-    },
-    {
-        "qtyPurchased": 1
-    },
-    {
-        "id": "12",
-        "name": "Honey",
-        "price": "$8",
-        "qty": 15
-    },
-    {
-        "qtyPurchased": 3
-    },
-    {
-        "id": "6",
-        "name": "Strawberries",
-        "price": "$5",
-        "qty": 20
-    },
-    {
-        "qtyPurchased": 2
-    },
-    {
-        "id": "11",
-        "name": "Raspberries",
-        "price": "$5",
-        "qty": 20
-    },
-    {
-        "qtyPurchased": 2
+    
+        "id": "321cba",
+        
+        "isBagCheckedOut": true,
+    
+    
+        "total": 10.50,
+    
+    
+        "user":
+        {
+            "_id": "123"
+           
+        },
+    
+    
+        "productPurchased":
+        {
+            "_id":654321
+        }
     }
+
 ]
+
+
