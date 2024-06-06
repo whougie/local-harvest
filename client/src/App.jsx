@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
+import { gsap } from "gsap";
 
 import Header from './components/header/Header';
 import About from './pages/about/About';
