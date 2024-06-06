@@ -1,10 +1,9 @@
 nav {
-  font-size:30px;
+  font-size:20px;
   display: flex;
-  height: 80%;
+  height: 50%;
   flex-direction: column;
-  margin-right: 70px;
-  align-items:end;
+  margin-left: 40%;
   justify-content: center;
  
 }
@@ -15,6 +14,10 @@ nav {
   /* margin-top: 50px; */
   padding: 10px;
 
+  
+}
+.navigation a:hover{
+  color: orange;
   
 }
 

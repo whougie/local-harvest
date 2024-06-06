@@ -1,7 +1,20 @@
 const {User, Product, ProductsPurchase, Bag} = require('../models');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+require("dotenv").config()
+
+
+async function createToken(user) {
+ const tokenData = { email: user.email } 
+ const token = await jwt.sign(tokenData, process.env.TOKEN_ENCRYPT_KEY);
+
+ return token;
+}
 
 module.exports = {
   
+  // /api/users
+  // get all users
   async getUsers(req, res) {
     try {
       const users = await User.find();
@@ -11,8 +24,8 @@ module.exports = {
     }
   },
   
-  
-  
+  // /api/users/:userId
+  // get a single user
   async getSingleUser(req, res) {
     try {
       const user = await User.findOne({ _id: req.params.userId });
@@ -27,11 +40,24 @@ module.exports = {
     }
   },
   
+  
+  // /api/users
+  // Create a user
   async createUser(req, res) {
     console.log(req)
     try {
       const user = await User.create(req.body);
-      res.json(user);
+      const token = await createToken(user);
+
+      // generate the cookie with token and set the cookie configs
+      res
+      .status(200)
+      .cookie('auth-cookie', token, {
+        maxAge: 86400 * 1000,
+        httpOnly: false,
+        secure: process.env.NODE_ENV === 'production'
+      })
+      .json( { status: 'success', payload: user} );
     } catch (err) {
       console.log(err);
       return res.status(500).json(err);
@@ -91,7 +117,6 @@ module.exports = {
   }
 },
 
-
 //Update a user
 async updateUser(req, res) {
   try {
@@ -108,6 +133,31 @@ async updateUser(req, res) {
     res.status(500).json(err);
   }
 },
+
+async verifyUser(req, res) {
+  const cookie = req.cookies['auth-cookie'];
+
+  if (!cookie) {
+    res.status(401).json({ status: 'error', msg: 'Could not authenticate user, there is not auth-cookie' })
+  }
+
+  //Verify the cookie and decrypt 
+  const decryptedCookie = jwt.verify(cookie, process.env.TOKEN_ENCRYPT_KEY);
+
+  let user;
+
+  try { // see if the user still is an exists in the DB
+    user = await User.findOne({ email: decryptedCookie.email })
+  } catch(err){
+    res.status(500).json({ status: 'error', msg: 'Could not authenticate user due to an error' })
+  }
+
+  if (!user) 
+    res.status(401).json({ status: 'error', msg: 'Could not authenticate user' })
+  else 
+    res.status(200).json({ status: 'success' })
+
+}
 
 // Add a friend to a user
 // async addFriendToUser(req, res) {
