@@ -27,12 +27,7 @@ export default function AuthPage() {
   async function handleSignup(event) {
     event.preventDefault()
     try {
-      console.log(JSON.stringify({
-        firstname:formData.firstname,
-        lastname: formData.lastname,
-        email: formData.signupEmail,
-        password: formData.signupPassword}))
-      console.log(formData)
+       console.log(formData)
       const response = await fetch("/api/users", {
         method: 'POST',
         body: JSON.stringify({
@@ -108,16 +103,16 @@ export default function AuthPage() {
       <form onSubmit={handleSignup} className='authForm'>
 
         <label>First Name</label>
-        <input type="text" name="firstname" value={formData.firstname} onChange={handleInputChange} />
+        <input type="text" name="firstname" value={formData.firstname || ""} onChange={handleInputChange} />
 
         <label>Last Name</label>
-        <input type="text" name="lastname" value={formData.lastname} onChange={handleInputChange} />
+        <input type="text" name="lastname" value={formData.lastname || ""} onChange={handleInputChange} />
 
         <label>Email</label>
-        <input type="text" name="signupEmail" value={formData.signupEmail} onChange={handleInputChange} />
+        <input type="text" name="signupEmail" value={formData.signupEmail || ""} onChange={handleInputChange} />
 
         <label>Password</label>
-        <input type="password" name="signupPassword" value={formData.signupPassword} onChange={handleInputChange} />
+        <input type="password" name="signupPassword" value={formData.signupPassword || ""} onChange={handleInputChange} />
 
         <button type="submit" className='authBtn'>Submit</button>
       </form>
