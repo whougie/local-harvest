@@ -27,7 +27,7 @@ export default function AuthPage(){
   async function handleSignup(event){
     event.preventDefault()
     try {
-      const response = await fetch("/api/user", {
+      const response = await fetch("/api/users", {
         method: 'POST',
         body: JSON.stringify({
           email: formData.signupEmail,
@@ -37,10 +37,12 @@ export default function AuthPage(){
           'Content-Type': 'application/json'
         }
       })
+      console.log(response)
       const result = await response.json()
       clearForms()
+      console.log(result)
     } catch(err){
-      console.log(err)
+      console.log(err.message)
     }
     // display a message to the user
   }
@@ -48,7 +50,7 @@ export default function AuthPage(){
   async function handleLogin(event){
     event.preventDefault()
     try {
-      const response = await fetch("/api/user/login", {
+      const response = await fetch("/api/users/login", {
         method: 'POST',
         body: JSON.stringify({
           email: formData.loginEmail,
@@ -61,7 +63,7 @@ export default function AuthPage(){
       const result = await response.json()
       clearForms()
       if( result.status === 'success' ){
-        navigate("/");
+        navigate("/market");
       }
     } catch(err){
       console.log(err.message)
@@ -72,7 +74,7 @@ export default function AuthPage(){
    async function handleLogout(event) {
     event.preventDefault()
     try {
-      const response = await fetch("/api/user/logout", {
+      const response = await fetch("/api/users/logout", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

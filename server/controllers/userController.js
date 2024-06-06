@@ -28,6 +28,7 @@ module.exports = {
   },
   
   async createUser(req, res) {
+    console.log(req)
     try {
       const user = await User.create(req.body);
       res.json(user);
@@ -36,6 +37,39 @@ module.exports = {
       return res.status(500).json(err);
     }
   },
+
+   async userLogin(req, res) {
+    try {
+      const user = await User.findOne({ email: req.body.email });
+  
+      if (!user) {
+        return res.status(500).json({ status: 'error', msg: 'Could not authenticate user' });
+      } 
+  
+      console.log('User found:', user);
+      res.status(200).json({ status: 'cool', msg: 'User authenticated successfully' });
+    } catch (err) {
+      console.log(err)
+      res.status(500).json({ status: 'error', msg: 'Could not authenticate user' });
+    }
+  },
+
+  // const verify = bcrypt.compare(req.body.password, user.password)
+  // if( !verify ){
+  //   res.status(500).json({ status: 'error', msg: 'Could not authenticate user' })
+  // }
+  
+  // const token = await createToken(user)
+  
+  // res
+  // .status(200)
+  // .cookie('auth-cookie', token, {
+  //   maxAge: 86400 * 1000,
+  //   httpOnly: false,
+  //   secure: process.env.NODE_ENV === 'production'
+  // })
+   //.json({ status: 'success', payload: user })
+//},
   
   // Delete a user
   async deleteUser(req, res) {
