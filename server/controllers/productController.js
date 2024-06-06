@@ -1,4 +1,4 @@
-const { User, Product, ProductsPurchased, Bag } = require('../models');
+const { User, Product, ProductsPurchase, Bag } = require('../models');
 
 module.exports = {
   
