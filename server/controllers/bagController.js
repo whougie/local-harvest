@@ -1,23 +1,26 @@
 const { User, Product, ProductsPurchase, Bag } = require('../models');
+const { populate } = require('../models/User');
 
 module.exports = {
   
   // get all bags
   async getBags(req, res) {
     try {
-      const bags = await Bag.find().populate(
-        [
+      const bags = await Bag.find().populate([ 
         {
-          path: "user"
-        },
+          path: 'user'
+        }, 
         {
-          path: "productsPurchase"  
-        },
-        {
-          path: "productsPurchase.purchase.product",
-          model: "product"  
+          path: 'productsPurchase',
+          populate: {
+            path: "purchase",
+            populate: {
+              path: "product"
+            }
+          }
         }
-       ]);
+      ]
+      );
       res.json(bags);
     } catch (err) {
       res.status(500).json(err);
@@ -28,14 +31,21 @@ module.exports = {
   async getSingleBag(req, res) {
     try {
       const bag = await Bag.findOne({ _id: req.params.bagId }).populate(
-        [
-        {
-          path: "user"
-        },
-        {
-          path: "purchase.product"  
-        }
-       ]);
+        [ 
+          {
+            path: 'user'
+          }, 
+          {
+            path: 'productsPurchase',
+            populate: {
+              path: "purchase",
+              populate: {
+                path: "product"
+              }
+            }
+          }
+        ]
+      );
       
       if (!bag) {
         return res.status(404).json({ message: 'No bag with that ID' });
@@ -90,5 +100,5 @@ module.exports = {
       res.status(500).json(err);
     }
   }
-
+  
 };
