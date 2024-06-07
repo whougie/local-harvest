@@ -1,12 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
-import Cookie from "js-cookie"
+import Cookie from "js-cookie";
+import { useAppContext } from '../../providers/AppProviders';
+
 import bagImage from "../nav/bag2.png";
 
 
 export default function Nav() {
   function logout(){
+    setCurrentUser(null);
     Cookie.remove('auth-cookie')
   // window.location.href = "/"  
   console.log(logout + "worked?")

@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import './Market.css';
 
 export default function Card({ image, title, price }){
 
@@ -10,9 +11,9 @@ export default function Card({ image, title, price }){
     };
 
     return (
-        <div className="productcard col-md-4">
-          <div className="card">
-            <img src={ image } alt={ title } className="card-image" />
+        // <div className="productcard col-md-4 align-items-stretch">
+          <div className="card col-3 m-2 p-2 text-center">
+            <img src={ image } alt={ title } className="card-image card-img-top " />
             <div className="card-content">
                 <h3 className="card-title">{ title }</h3>
                 <p className="card-price">${ price }</p>
@@ -21,6 +22,6 @@ export default function Card({ image, title, price }){
                 </button>
           </div>
         </div>
-    </div>
+    // </div>
     )
 }

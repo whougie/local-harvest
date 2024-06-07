@@ -15,18 +15,20 @@ export const useAppContext = () => useContext(AppContext)
 export default function AppProvider(props){
 
   const [ currentUser, setCurrentUser ] = useState()
+  const test = "Testing Value Made it"
 
 
   async function verfiyUser(){
-    const foundCoookie =Cookie.get();
+    const foundCoookie =Cookie.get('auth-cookie');
     if( foundCoookie ){
       const response = await fetch("/api/users/verify", {
-      method: 'Post'
+      method: 'Get'
       })
       if (!response.ok) {
         return setCurrentUser(null)
       }
       const foundUser = await response.json()
+      console.log("In AuthPage and foundUser is")
       console.log(foundUser)
       setCurrentUser(foundUser)
     }
@@ -38,7 +40,7 @@ export default function AppProvider(props){
 
   return(
 
-    <AppContext.Provider value={{ currentUser }}>
+    <AppContext.Provider value={{ currentUser, setCurrentUser, test}}>
       {props.children}
     </AppContext.Provider>
   )
