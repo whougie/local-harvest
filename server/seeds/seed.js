@@ -10,10 +10,10 @@ const userSeeds = require('./user.json');
 db.once('open', async () => {
   try {
     // Clear existing data 
-    await Product.deleteMany({});
-    await Bag.deleteMany({});
-    await ProductsPurchase.deleteMany({});
-    await User.deleteMany({});
+    // await Product.deleteMany({});
+    // await Bag.deleteMany({});
+    // await ProductsPurchase.deleteMany({});
+    // await User.deleteMany({});
 
     // Insert seed data
     await Product.create(productSeeds);

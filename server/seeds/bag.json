@@ -1,7 +1,8 @@
 [
     {
     
-        "id": "123abc",
+        "id": "f1d2d2f924e986ac86fdf7b36",
+
         
         "isBagCheckedOut": true,
     
@@ -11,21 +12,23 @@
     
         "user":
         {
-            "_id": "789"
+            "_id": "7e31bcf03d75a326a5573b7b"
            
         },
     
     
         "productPurchased":
         {
-            "_id":123456
+            "_id":"ea688eb5a7cc4550647d281b"
         }
     },
+    
 
 
     {
     
-        "id": "456def",
+        "id": "07c652bb357f88673889e69b",
+        
         
         "isBagCheckedOut": false,
     
@@ -35,21 +38,22 @@
     
         "user":
         {
-            "_id": "789"
+            "_id": "7e31bcf03d75a326a5573b7b"
            
         },
     
     
         "productPurchased":
         {
-            "_id":67890
+            "_id":"870ed2059cbebc772793f729"
         }
+        
     },
 
 
     {
     
-        "id": "321cba",
+        "id": "91957db713e8e64e96bdc286",
         
         "isBagCheckedOut": true,
     
@@ -59,14 +63,14 @@
     
         "user":
         {
-            "_id": "123"
+            "_id": "7cba0bbf6256bfa781ee7db2"
            
         },
     
     
         "productPurchased":
         {
-            "_id":654321
+            "_id":"27b3aa0af0ea77610e6566b7"
         }
     }
 
