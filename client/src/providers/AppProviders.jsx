@@ -18,9 +18,14 @@ export default function AppProvider(props){
 
 
   async function verfiyUser(){
-    const foundCoookie =Cookie.get("auth-cookie");
+    const foundCoookie =Cookie.get();
     if( foundCoookie ){
-      const response = await fetch("/api/users/verify")
+      const response = await fetch("/api/users/verify", {
+      method: 'Post'
+      })
+      if (!response.ok) {
+        return setCurrentUser(null)
+      }
       const foundUser = await response.json()
       console.log(foundUser)
       setCurrentUser(foundUser)

@@ -1,14 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
-
+import Cookie from "js-cookie"
 
 
 export default function Nav() {
 
   function logout(){
     Cookie.remove('auth-cookie')
-  window.location.href = "/"  
+  // window.location.href = "/"  
   console.log(logout + "worked?")
   }
   return (
