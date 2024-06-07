@@ -69,7 +69,6 @@ export default function AuthPage() {
       const result = await response.json()
       clearForms()
       if (result.status === 'success') {
-      //  navigate("/market");
         window.location.href="/market";
       }
     } catch (err) {

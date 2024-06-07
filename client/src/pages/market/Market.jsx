@@ -17,26 +17,6 @@ function Market() {
     { scope: containerRef }
   );
   
-  // useEffect(() => {
-  //   if (currentUser) {
-  //     console.log("This is current User where it's true");
-  //     console.log(test);
-  //     console.log(currentUser);
-  //     displayContent();
-  //   } else {
-  //     console.log("This is current User where it's false");
-  //     console.log(test);
-  //     console.log(currentUser);
-  //     // return ( <><a href='/auth'>To Access Marketplace Please Login</a></>)
-      
-  //     // displayProtectedContent();
-  //   }
-  // },[currentUser])
-
-     console.log("This is current User:");
-     console.log(currentUser);
-
-
     return (
 
       <>

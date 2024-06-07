@@ -8,10 +8,12 @@ import bagImage from "../nav/bag2.png";
 
 
 export default function Nav() {
+const { setCurrentUser } = useAppContext();
+
   function logout(){
     setCurrentUser(null);
     Cookie.remove('auth-cookie')
-  // window.location.href = "/"  
+    window.location.href = "/"  
   console.log(logout + "worked?")
   }
 
