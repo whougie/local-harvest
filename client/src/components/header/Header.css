@@ -8,3 +8,13 @@
  
 
 }
+
+.projectName{
+    display: flex;
+    margin-left: 700px;
+    color: aliceblue;
+    font-weight: 90px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+ 
+  }
+  

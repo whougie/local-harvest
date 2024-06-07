@@ -19,6 +19,7 @@
   background-color: #ed5c0b;
   color: #fff;
   border: none;
+  margin-bottom: 30px;
   border-radius: 4px;
   cursor: pointer;
   margin-left: 190px;
@@ -94,10 +95,29 @@
   cursor: pointer;
   outline: none;
 }
+
+.farmBtn:hover{
+background-color: #0056b3;
+}
+
+
 .farm{
   color: #fff;
+  font-size: 20px;
+  padding: 20px;
+  text-shadow: grey(92, 116, 151);
 }
 .farmTitle{
   color: #ed5c0b;
   font-size: 26px;
+}
+
+
+.secondArticle{
+  display: flex;
+  width: 800px;
+  margin-left: 20rem;
+  margin-top: 40px;
+  text-align: justify;
+
 }
