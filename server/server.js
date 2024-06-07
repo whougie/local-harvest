@@ -4,7 +4,7 @@ const db = require('./config/connection');
 const routes = require("./routes")
 const cookieParser = require('cookie-parser');
 const cors = require('cors')
-const { User, Product, ProductsPurchased, Bag } = require('./models');
+// const { User, Product, ProductsPurchase, Bag } = require('./models');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -24,6 +24,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 db.once('open', () => {
-  app.listen(PORT, () => console.log(`API server running on port ${PORT}!`) );
+  app.listen(PORT, () => console.log(`API server for running on port ${PORT}!`) );
 });
 
