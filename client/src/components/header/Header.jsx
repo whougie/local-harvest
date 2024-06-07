@@ -8,9 +8,9 @@ export default function Header(){
 return(
 
   <header className='header'>
-  
-
+   
     <Nav/>
+    <h1 className='projectName'>Local Farm</h1>
 
   </header>
 
