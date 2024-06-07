@@ -1,11 +1,14 @@
 import React from 'react'
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import { useAppContext } from '../../providers/AppProviders';
 import "./Auth.css"
 
 
 
 export default function AuthPage() {
+
+  const { setCurrentUser } = useAppContext();
 
   const navigate = useNavigate();
 
@@ -66,7 +69,7 @@ export default function AuthPage() {
       const result = await response.json()
       clearForms()
       if (result.status === 'success') {
-        navigate("/market");
+        window.location.href="/market";
       }
     } catch (err) {
       console.log(err.message)
@@ -85,6 +88,7 @@ export default function AuthPage() {
       });
 
       if (response.ok) {
+        setCurrentUser(null);
         // Clear any client-side stored data (e.g., tokens)
         clearForms();
         navigate("/home"); // Redirect to the home page after logout

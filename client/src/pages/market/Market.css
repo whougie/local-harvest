@@ -1,8 +1,8 @@
 
-.cardcontainer{
+/* .cardcontainer{
   display: flex;
   flex-wrap:wrap;
-}
+} */
 
 .productcard {
   /* display: flex; */
@@ -11,17 +11,18 @@
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 8px;
-  margin: 10px;
-  padding: 10px;
-  opacity: 0;
+  /* margin: 10px;
+  padding: 10px; */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: fit-content; 
 }
 
 .card-image {
-  max-width: 100%;
-  height: auto;
+  /* max-width: 100%; */
+  /* height: auto;
+  overflow: hidden; */
   border-radius: 8px;
+  height: 100%;
 }
 
 .card-content {
