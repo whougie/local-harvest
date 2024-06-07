@@ -44,12 +44,11 @@ module.exports = {
   // /api/users
   // Create a user
   async createUser(req, res) {
-    console.log("are you making it")
     console.log(req.body)
     try {
       const user = await User.create(req.body);
       const token = await createToken(user);
-
+      
       // generate the cookie with token and set the cookie configs
       res
         .status(200)
@@ -72,6 +71,8 @@ module.exports = {
 
       if (!user) {
         return res.status(500).json({ status: 'error', msg: 'Could not authenticate user' });
+      } 
+      
       }
 
       console.log('User found:', user);
@@ -106,8 +107,8 @@ module.exports = {
       if (!user) {
         res.status(404).json({ message: 'No user with that ID' });
       } else
-        res.json({ message: 'User deleted!' });
-
+      res.json({ message: 'User deleted!' });
+      
       // else { if (user.thoughts.length) {
       //   await User.deleteMany({ _id: { $in: user.thoughts } });
       // }
