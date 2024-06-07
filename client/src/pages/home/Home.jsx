@@ -1,16 +1,11 @@
 import { useState } from 'react';
 import React from 'react'
 import './Home.css';
-// import { useHistory } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 
 export default function Home(){
-  const history = useHistory();
-  // click event
-  const handleGetInvolvedClick = () =>{
-    history.push("");
-  };
+ 
 return(
 <>
   <div className='blog'>
@@ -30,7 +25,7 @@ Incorporating locally sourced food into your diet doesn't have to be daunting. S
     <div className='border'>
     <h1 className="harvest"></h1>
       <h3 className="farm"> Bringing the Farm to your Table in one quick stop! </h3>
-      <button className='homebtn'onClick={handleGetInvolvedClick}> GET INVOLVED </button>
+      <button className='homebtn'> GET INVOLVED </button>
       </div>
  </div>
    <p className='secondArticle'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos voluptatum voluptatem culpa? Iusto sunt animi doloremque. Molestiae repudiandae, eaque, inventore nam voluptate perferendis hic eius consectetur suscipit odio, laboriosam rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore obcaecati quam quibusdam doloribus, ab in ratione quasi quaerat laboriosam voluptate optio, quidem enim reprehenderit vel assumenda officia aperiam, nihil cupiditate!</p>
