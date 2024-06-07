@@ -46,6 +46,9 @@ export default function AuthPage() {
       console.log(response)
       const result = await response.json()
       clearForms()
+      if (result.status === 'success') {
+        window.location.href="/market";
+      }
       console.log(result)
     } catch (err) {
       console.log(err.message)
