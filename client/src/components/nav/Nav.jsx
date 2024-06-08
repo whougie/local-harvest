@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
+
 import bagImage from "../nav/bag2.png";
 
-export default function Nav() {
+export default function Nav({ size, setShow }) {
   return (
     <>
       <nav>
@@ -13,13 +14,20 @@ export default function Nav() {
           <NavLink to='/market'>Market</NavLink>
           <NavLink to='/involvement'>Get Involved</NavLink>
         </div>
-        <div className='iconBag'>
+
+        <div className='iconBag' onClick={() => setShow(true)}>
+          {/* NavLink to the Bag component */}
           <NavLink to='/bag' className="bag">Bag</NavLink>
-          <img src={bagImage} alt="Bag" className='bagicon'/>
+          {/* Image link to navigate to the Bag component */}
+          <NavLink to='/bag' className='bagicon' onClick={() => setShow(false)}>
+            <img src={bagImage} alt="Bag" className='bagicon' />
+          </NavLink>
         </div>
+
         <ul>
-          {/* <br /> */}
+          {/* Optional content */}
         </ul>
+
         <div className='auth'>
           <NavLink to='/auth'>Membership</NavLink>
           <NavLink to='/auth'>Login</NavLink>
