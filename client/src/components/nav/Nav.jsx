@@ -16,7 +16,8 @@ export default function Nav({ bagCount, setShow }) {
 
         <div className='iconBag' onClick={() => setShow(true)}>
           <NavLink to='/bag' className="bag">
-            Bag <span className="bag-count">{bagCount}</span>
+            Bag {bagCount > 0 && <span className="bag-count">{bagCount}</span>}
+            {bagCount > 0 && <span className="bag-message">Items Added</span>}
           </NavLink>
           <NavLink to='/bag' className='bagicon' onClick={() => setShow(false)}>
             <img src={bagImage} alt="Bag" className='bagicon' />
