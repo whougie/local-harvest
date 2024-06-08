@@ -3,7 +3,7 @@ import Nav from './Nav';
 import Market from './Market';
 import Bag from './Bag';
 import bagImage from '../nav/bag2.png';
-import './styles/amazon.css';
+
 
 const App = () => {
   const [show, setShow] = useState(true);
