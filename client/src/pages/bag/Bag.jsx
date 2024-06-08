@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Bag.css';
+import Market from '../market/Market';
 
 // Bag component responsible for rendering the bag items and managing bag operations
 const Bag = ({ bag, handleChange, setBag, updateBagCount }) => {
@@ -36,11 +37,14 @@ const Bag = ({ bag, handleChange, setBag, updateBagCount }) => {
             <p>{item.title}</p> {/* Render item title */}
           </div>
           <div>
+
             {/* Buttons to increase/decrease item quantity */}
             <button onClick={() => { handleChange(item, +1); updateBagCount() }}> + </button> {/* Button to increase item quantity */}
             <button>{item.amount}</button> {/* Button to display item quantity */}
             <button onClick={() => handleChange(item, -1)}> - </button> {/* Button to decrease item quantity */}
+
           </div>
+
           <div>
             <span>{item.price}</span> {/* Render item price */}
             <button onClick={() => handleRemove(item.id)}>Remove</button> {/* Button to remove item */}
@@ -56,4 +60,4 @@ const Bag = ({ bag, handleChange, setBag, updateBagCount }) => {
   );
 };
 
-export default Bag; // Export Bag component
+export default Bag; 
