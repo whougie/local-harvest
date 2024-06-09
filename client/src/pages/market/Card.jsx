@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import './Market.css';
 
-export default function Card({ image, title, price }){
+export default function Card({ image, title, price, description }){
 
     const [isClicked, setIsClicked] = useState(false);
 
@@ -16,6 +16,7 @@ export default function Card({ image, title, price }){
             <img src={ image } alt={ title } className="card-image card-img-top " />
             <div className="card-content">
                 <h3 className="card-title">{ title }</h3>
+                <p className="card-description"> { description }</p>
                 <p className="card-price">${ price }</p>
                 <button className="card-button" onClick={ handleClick }>
                     { isClicked ? "Added to Bag" : "Add to Bag" }
