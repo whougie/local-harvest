@@ -1,28 +1,112 @@
+
 [
   {
-    "product_id": "9",
-    "product": "watermelon",
-    "qty":3 
+    "_id":"7e31bcf03d75a326a5573b7b",
+    
+    "user":{
+      "_id": "7e31bcf03d75a326a5573b7b"
+    },
+    
+    "purchase": 
+    [
+      {
+      
+        "product": {
+          
+          "_id": "67d4178f2fcf7de41207dea5"
+        },
+        
+        "qtyPurchase": 3,
+        
+        "totalPurchase": 12.00
+      },
+
+      {
+      "product": {
+          
+        "_id": "0b1ba9dee0292f7f45fbf1ae"
+      },
+      
+      "qtyPurchase": 3,
+      
+      "totalPurchase": 24.00
+    }
+
+    ]
   },
+
+
+
   {
-    "product_id": "3",
-    "product": "roses",
-    "qty":1 
+    "_id":"885be2c0b22273bd030d755c",
+    
+    "user":{
+      "_id": "7e31bcf03d75a326a5573b7b"
+    },
+    
+    "purchase": 
+    [
+      {
+      
+        "product": {
+          
+          "_id": "16ba88e9d4798337715408de"
+        },
+        
+        "qtyPurchase": 3,
+        
+        "totalPurchase": 7.50
+      },
+
+      {
+      "product": {
+          
+        "_id": "b367c597bb42c9fe37707f1c"
+      },
+      
+      "qtyPurchase": 4,
+      
+      "totalPurchase": 10.00
+    }
+
+    ]
   },
+
+
+
   {
-    "product_id": "12",
-    "product": "honey",
-    "qty":3 
-  },
-  {
-    "product_id": "6",
-    "product": "strawberrys",
-    "qty":3 
-  },
-  {
-    "product_id": "11",
-    "product": "Rasberries",
-    "qty":2
+    "_id":"40ffee8d3f99933bf3d745f4",
+    
+    "user":{
+      "_id": "7cba0bbf6256bfa781ee7db2"
+    },
+    
+    "purchase": 
+    [
+      {
+      
+        "product": {
+          
+          "_id": "b16241c353e4ccf0ebbec920"
+        },
+        
+        "qtyPurchase": 2,
+        
+        "totalPurchase": 5.00
+      },
+
+      {
+      "product": {
+          
+        "_id": "4e7a72eb8138192261943f4a"
+      },
+      
+      "qtyPurchase": 3,
+      
+      "totalPurchase": 10.50
+    }
+
+    ]
   }
 ] 
-    
+

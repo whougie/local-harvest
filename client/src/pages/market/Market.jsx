@@ -1,57 +1,54 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Market.css';
-import list from "../../../src/data";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav from '../../components/nav/Nav';
+import 'bootstrap/dist/css/bootstrap.min.css'; 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import Card from "./Card"
+import { useAppContext } from '../../providers/AppProviders';
 
-export default function Market({ handleClick }) {
-  const Card = ({ id, description, image, title, price }) => {
-    const [quantity, setQuantity] = useState(1);
+gsap.registerPlugin(useGSAP);
 
-      // event
-    const handleQuantityChange = (e) => {
-      const value = parseInt(e.target.value);
-      setQuantity(value);
-    };
+function Market() {
+  const containerRef = useRef();
+  const { currentUser } = useAppContext();
+  const [ products, setProducts ] = useState();
 
+  useEffect(() => {
+    fetch('/api/products')
+    .then( (response) => response.json())
+    .then( (data) => { setProducts(data)
+    })
+  }, [])
+
+  function displayProducts() {
+    return (<>
+    {products.map((product, index) => <Card key={index} image={"/images/" + product.picture} title={product.name} price={product.price} />)}
+    </>
+    )
+  }
+
+  // useGSAP( () => 
+  //   { gsap.to('.productcard', { x: 2, y: 2, opacity: 1, stagger: 0.9 }); },
+  //   { scope: containerRef }
+  // );
+  
     return (
-      <div className="col-md-4">
-        <div className="card">
-          <img src={image} alt={title} className="card-image" />
-          <div className="card-content">
-            <h3 className="card-title">{title}</h3>
-            <p className="card-price">${price}</p>
-            <p className="card-price">{description}</p>
-           
-            <div className="quantity-section">
-              <label htmlFor={`quantity-${id}`} >Quantity:</label>
-              <input
-                type="number"
-                id={`quantity-${id}`}
-                value={quantity}
-                onChange={handleQuantityChange}
-                min={1}
-              />
-            </div>
-            <button
-              className="card-button"
-              onClick={() => handleClick({ id, description, image, title, price, quantity })}
-            >
-              Add to Bag
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  };
 
-  return (
-    <div>
-      <div className="card-container">
-        {list.map((item) => (
-          <Card key={item.id} id={item.id} image={item.img} title={item.title} price={item.price} />
-        ))}
+      <>
+    { currentUser ? 
+    <div className='container'>
+      <p className='row justify-content-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+      <div className="cardcontainer row justify-content-center" ref={containerRef}>
+        {displayProducts()}
       </div>
     </div>
-  );
+     : 
+         <><a href='/auth'>To Access Marketplace Please Login</a></>
+    }
+</>
+
+)
+    
 }
+  
+export default Market

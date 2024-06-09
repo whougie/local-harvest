@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css';
 import Nav from '../nav/Nav';
 // import logo from "./localHavestLogo.png"
+import { gsap } from "gsap";
 
 export default function Header(){
 
