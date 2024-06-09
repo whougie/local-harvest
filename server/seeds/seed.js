@@ -17,7 +17,7 @@ db.once('open', async () => {
 
     // Insert seed data
     await Product.create(productSeeds);
-    await Bag.create(bagSeeds);
+    // await Bag.create(bagSeeds);
     await ProductsPurchase.create(productsPurchasedSeeds);
     await User.create(userSeeds);
 
