@@ -56,8 +56,27 @@
   background-color: #0056b3;
 }
 
+.redirect {
+  flex-direction: column;
+  color:#ed5c0b;
+  text-decoration: none;
+  font-size: 30px;
+  align-items: center;
+  
+}
+
+.redirectBox {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:5rem;
+  /* width: 50vw; */
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px;
+  
 .quantity-section{ 
   width: 100px;
-
 
 }

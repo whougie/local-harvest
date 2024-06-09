@@ -37,13 +37,15 @@ function Market() {
       <>
     { currentUser ? 
     <div className='container'>
-      <p className='row justify-content-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+      <p className='row justify-content-center'>Welcome to the Market Place!  We hope you enjoy these options from our local partners.</p>
       <div className="cardcontainer row justify-content-center" ref={containerRef}>
         {displayProducts()}
       </div>
     </div>
      : 
-         <><a href='/auth'>To Access Marketplace Please Login</a></>
+        <div className='redirectBox'>
+         <><a href='/auth' className='redirect'>To Access Marketplace Please Click and Login</a></>
+         </div>
     }
 </>
 

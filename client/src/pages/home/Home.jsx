@@ -22,8 +22,9 @@ return(
   <p>Beyond the environmental impact, eating from local farms fosters a sense of community and connection. When you buy directly from farmers at farmers' markets or through community-supported agriculture (CSA) programs, you're not just purchasing food; you're investing in relationships. Farmers markets serve as gathering places where neighbors can meet, exchange ideas, and form bonds over a shared appreciation for fresh, wholesome food. </p>
 
 
-Incorporating locally sourced food into your diet doesn't have to be daunting. Start by exploring farmers markets in your area or joining a CSA program to receive a regular supply of fresh produce. Get to know the farmers and producers who grow your food, ask questions about their growing practices, and learn more about the seasonal rhythms of agriculture in your region. Experiment with new recipes that highlight the flavors of local ingredients, and don't be afraid to get creative in the kitchen.<button onClick={redirectToBlog} className='farmBtn'>READ MORE</button></p>
-  <img src ="../../public/images/farmer1.jpg" alt="blogimage" className='farmTruck'/>
+Incorporating locally sourced food into your diet doesn't have to be daunting. Start by exploring farmers markets in your area or joining a CSA program to receive a regular supply of fresh produce. Get to know the farmers and producers who grow your food, ask questions about their growing practices, and learn more about the seasonal rhythms of agriculture in your region. Experiment with new recipes that highlight the flavors of local ingredients, and don't be afraid to get creative in the kitchen.<button onClick={useState} className='farmBtn'>READ MORE</button></p>
+  <img src ="/images/farmer1.jpg" alt="blogimage" className='farmTruck'/>
+
 
   </div>
 
@@ -39,11 +40,11 @@ Incorporating locally sourced food into your diet doesn't have to be daunting. S
 
 
  <marquee behavior="scroll" direction="left">
-    <img src="../../public/images/mixture-lettuce.jpg" alt="lettuce mix" className="homeImg"/>
+    <img src="/images/mixture-lettuce.jpg" alt="lettuce mix" className="homeImg"/>
     <img src="https://images.squarespace-cdn.com/content/v1/53f2223ee4b0516cd60b393d/1408461079830-UCX14SSH8ORD2TWUT8GF/barnMorning.jpg" alt="chiles" className="homeImg"/>
-    <img src="../../public/images/tomatoes.jpg" alt="tomatoes" className="homeImg"/>
-    <img src="../../public/images/greenonionandcarrots.jpg" alt="green onions and" className='homeImg'/>
-    <img src="../../public/images/corn.jpg" alt="corn" className="homeImg"/>
+    <img src="/images/tomatoes.jpg" alt="tomatoes" className="homeImg"/>
+    <img src="/images/greenonionandcarrots.jpg" alt="green onions and" className='homeImg'/>
+    <img src="/images/corn.jpg" alt="corn" className="homeImg"/>
     <img src="https://plus.unsplash.com/premium_photo-1686156706311-347c7a913567?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="corn" className="homeImg"/>
   </marquee>
   
