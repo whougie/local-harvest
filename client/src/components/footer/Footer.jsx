@@ -2,6 +2,7 @@ import React from 'react'
 import './Footer.css';
 
 
+
 export default function Footer() {
 
   return (
@@ -15,14 +16,23 @@ export default function Footer() {
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8d_FPc-eDYSx9-Sv5yIsAId5VFcoE7X-XNQ&s" alt="stPaulFarmersMarketLogo" className='logos' />
         </div>
 
-        <div className='copyright'>
-          <h2> &copy; 2024 Local Harvest  </h2>
-        </div>
-
+        <div className='=allfooter'>
+          
         <div className='connect'>
-          <h2>Connect With Us</h2>
+       
+          <p>Connect With Us</p>
+          <p> Email: contact@localharvest.com
+              <p>Phone: (123) 456-7890</p>
+              Address: 1234 Harvest Lane, Townsville, State, 56789</p>
+        </div>
+
+        <div className='copyright'>
+          <p> &copy; 2024 Local Harvest  </p>
+        </div>
+
 
         </div>
+
 
       </footer>
     </>
