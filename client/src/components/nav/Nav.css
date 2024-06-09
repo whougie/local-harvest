@@ -1,8 +1,18 @@
+
+.logo{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 40px;
+  padding-top: 20px;
+  height: 100px;
+  width: 160px;
+}
 nav {
   font-size:20px;
   display: flex;
   height: 50%;
   flex-direction: column;
+  margin-top: -80px;
   margin-left: 40%;
   justify-content: center;
  
@@ -77,4 +87,19 @@ gap: 10px;
   display: flex; 
   justify-content: center;
   align-items: center; 
+}
+
+/* count */
+.bag-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  margin-left: 5px;
+}
+
+.bag-message {
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
 }

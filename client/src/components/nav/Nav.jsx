@@ -5,9 +5,9 @@ import Cookie from "js-cookie";
 import { useAppContext } from '../../providers/AppProviders';
 
 import bagImage from "../nav/bag2.png";
+import logo from "./localHavestLogo.png"
 
-
-export default function Nav({ size, setShow }) {
+export default function Nav({ size, bagCount, setShow }) {
 const { setCurrentUser } = useAppContext();
 
   function logout(){
@@ -18,7 +18,9 @@ const { setCurrentUser } = useAppContext();
   }
   return (
     <>
+      <img src={logo} alt="Local Harvest Logo" className='logo' />
       <nav>
+      
         <div className='navigation'>
           <NavLink to='/'>Home</NavLink>
           <NavLink to='/about'>About</NavLink>
@@ -27,9 +29,10 @@ const { setCurrentUser } = useAppContext();
         </div>
 
         <div className='iconBag' onClick={() => setShow(true)}>
-          {/* NavLink to the Bag component */}
-          <NavLink to='/bag' className="bag">Bag</NavLink>
-          {/* Image link to navigate to the Bag component */}
+          <NavLink to='/bag' className="bag">
+            Bag {bagCount > 0 && <span className="bag-count">{bagCount}</span>}
+            {bagCount > 0 && <span className="bag-message">Items Added</span>}
+          </NavLink>
           <NavLink to='/bag' className='bagicon' onClick={() => setShow(false)}>
             <img src={bagImage} alt="Bag" className='bagicon' />
           </NavLink>

@@ -1,47 +1,31 @@
 import React, { useState } from 'react';
 import Nav from './Nav';
 import Market from './Market';
-import Bag from './Bag';
-import bagImage from '../nav/bag2.png';
-import './styles/amazon.css';
+import Bag from '../bag/Bag';
 
 const App = () => {
-  const [show, setShow] = useState(true);
-  const [bag, setBag] = useState([]);
-  const [bagCount, setBagCount] = useState(0);
+  const [show, setShow] = useState(true); // State for controlling whether to show Market or Bag component
+  const [bag, setBag] = useState([]); // State for maintaining the items in the bag
 
   const handleClick = (item) => {
-    let isPresent = false;
-    bag.forEach((product) => {
-      if (item.id === product.id) isPresent = true;
-    });
-    if (isPresent) {
-      return;
+    // Check if the item is already present in the bag
+    if (!bag.some((product) => product.id === item.id)) {
+      // If item is not present, add it to the bag state
+      setBag([...bag, item]);
     }
-    setBag([...bag, item]);
   };
 
-  const handleChange = (item, d) => {
-    let ind = -1;
-    bag.forEach((data, index) => {
-      if (data.id === item.id) ind = index;
-    });
-    const tempArr = [...bag];
-    tempArr[ind].amount += d;
-    if (tempArr[ind].amount === 0) tempArr[ind].amount = 1;
-    setBag(tempArr);
-  };
-
-  const updateBagCount = () => {
-    setBagCount(bag.length);
-  };
+  // Calculate the bag count based on the length of the bag array
+  const bagCount = bag.length;
 
   return (
     <React.Fragment>
-      <Nav size={bagCount} setShow={setShow} />
-      {show ? <Market handleClick={handleClick} /> : <Bag bag={bag} handleChange={handleChange} setBag={setBag} updateBagCount={updateBagCount} />}
-    </React.Fragment>
-  );
+    <Nav setShow={setShow} />
+    {/* Conditionally render either the Market or Bag component based on the 'show' state */}
+    {show ? <Market /> : <Bag />}
+  </React.Fragment>
+);
 };
+
 
 export default App;
