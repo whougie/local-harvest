@@ -30,6 +30,8 @@ module.exports = {
   // create a product
   async createProduct(req, res) {
     try {
+      console.log(req.body)
+
       const product = await Product.create(req.body);
       res.json(product);
     } catch (err) {

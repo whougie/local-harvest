@@ -7,7 +7,7 @@ import { useAppContext } from '../../providers/AppProviders';
 import bagImage from "../nav/bag2.png";
 import logo from "./localHavestLogo.png"
 
-export default function Nav({ size, bagCount, setShow }) {
+export default function Nav({ bagCount, setShow }) {
 const { setCurrentUser } = useAppContext();
 
   function logout(){
