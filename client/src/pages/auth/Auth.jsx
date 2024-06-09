@@ -136,9 +136,9 @@ export default function AuthPage() {
         <button type="submit" className='authBtn'>Submit</button>
       </form>
 
-      <form id="logoutForm" onSubmit={handleLogout} className='logoutForm'>
+      {/* <form id="logoutForm" onSubmit={handleLogout} className='logoutForm'>
         <button type="submit" className='authBtn'>Logout</button>
-      </form>
+      </form> */}
 
     </div>
   )
