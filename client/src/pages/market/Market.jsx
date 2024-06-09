@@ -37,8 +37,8 @@ function Market() {
       <>
     { currentUser ? 
     <div className='container'>
-      <p className='row justify-content-center'>Welcome to the Market Place!  We hope you enjoy these options from our local partners.</p>
-      <div className="cardcontainer row justify-content-center" ref={containerRef}>
+      <p className='row justify-content-center text-center display-6'>Welcome to the Market Place!  We hope you enjoy these options from our local partners.</p>
+      <div className="cardcontainer row justify-content-center img-thumbnail " ref={containerRef}>
         {displayProducts()}
       </div>
     </div>

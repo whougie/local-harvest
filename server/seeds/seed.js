@@ -18,8 +18,8 @@ db.once('open', async () => {
     // Insert seed data
     await Product.create(productSeeds);
     // await Bag.create(bagSeeds);
-    await ProductsPurchase.create(productsPurchasedSeeds);
-    await User.create(userSeeds);
+    // await ProductsPurchase.create(productsPurchasedSeeds);
+    // await User.create(userSeeds);
 
     console.log('All data seeded successfully!');
     process.exit(0);
