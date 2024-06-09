@@ -18,15 +18,17 @@
 } */
 
 .logos {
-  height: 5rem;
-  width: 6rem;
-  margin: 5px;
+  height: 3rem;
+  width: 4rem;
+  margin: 30px;
 
 }
 
 .copyright {
+  display: flex;
+  margin-left: -300px;
   color: #e1e1e1;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .connect {
@@ -39,4 +41,8 @@
   display:flex;
   flex-wrap: wrap;
  
+}
+
+.allfooter{
+  display: flex;
 }

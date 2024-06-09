@@ -2,11 +2,14 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
 import bagImage from "../nav/bag2.png";
+import logo from "./localHavestLogo.png"
 
 export default function Nav({ bagCount, setShow }) {
   return (
     <>
+      <img src={logo} alt="Local Harvest Logo" className='logo' />
       <nav>
+      
         <div className='navigation'>
           <NavLink to='/'>Home</NavLink>
           <NavLink to='/about'>About</NavLink>
