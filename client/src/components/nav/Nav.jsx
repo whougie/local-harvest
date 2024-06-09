@@ -1,10 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
+import Cookie from "js-cookie";
+import { useAppContext } from '../../providers/AppProviders';
 
 import bagImage from "../nav/bag2.png";
 
+
 export default function Nav({ size, setShow }) {
+const { setCurrentUser } = useAppContext();
+
+  function logout(){
+    setCurrentUser(null);
+    Cookie.remove('auth-cookie')
+    window.location.href = "/"  
+  console.log(logout + "worked?")
+  }
   return (
     <>
       <nav>
@@ -31,7 +42,7 @@ export default function Nav({ size, setShow }) {
         <div className='auth'>
           <NavLink to='/auth'>Membership</NavLink>
           <NavLink to='/auth'>Login</NavLink>
-          <NavLink to='/auth'>Logout</NavLink>
+          <NavLink to='/auth' onClick={logout}>Logout</NavLink>
         </div>
       </nav>
     </>

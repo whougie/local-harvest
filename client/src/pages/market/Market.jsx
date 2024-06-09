@@ -1,45 +1,54 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Market.css';
-import list from "../../../src/data"
 import 'bootstrap/dist/css/bootstrap.min.css'; 
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import Card from "./Card"
+import { useAppContext } from '../../providers/AppProviders';
 
-export default function Market() {
-  // Define Card component here
-  const Card = ({ image, title, price }) => {
-    // State to track if the button is clicked
-    const [isClicked, setIsClicked] = React.useState(false);
+gsap.registerPlugin(useGSAP);
 
-    // Function to handle button click
-    const handleClick = () => {
-      setIsClicked(true);
-      console.log("I got clicked");
-    };
+function Market() {
+  const containerRef = useRef();
+  const { currentUser } = useAppContext();
+  const [ products, setProducts ] = useState();
 
+  useEffect(() => {
+    fetch('/api/products')
+    .then( (response) => response.json())
+    .then( (data) => { setProducts(data)
+    })
+  }, [])
+
+  function displayProducts() {
+    return (<>
+    {products.map((product, index) => <Card key={index} image={"/images/" + product.picture} title={product.name} price={product.price} />)}
+    </>
+    )
+  }
+
+  // useGSAP( () => 
+  //   { gsap.to('.productcard', { x: 2, y: 2, opacity: 1, stagger: 0.9 }); },
+  //   { scope: containerRef }
+  // );
+  
     return (
-      <div className="col-md-4"> {/* Each card will take 4 columns on medium-sized screens */}
-        <div className="card">
-          <img src={ image } alt={ title } className="card-image" />
-          <div className="card-content">
-            <h3 className="card-title">{ title }</h3>
-            <p className="card-price">${ price }</p>
-            <button className="card-button" onClick={ handleClick }>
-              { isClicked ? "Added to Bag" : "Add to Bag" }
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  };
 
-  return (
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
-      <div className="card-container">
-        {/* Render card items from the list array */}
-        {list.map((item) => (
-          <Card key={item.id} image={item.image} title={item.title} price={item.price} />
-        ))}
+      <>
+    { currentUser ? 
+    <div className='container'>
+      <p className='row justify-content-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+      <div className="cardcontainer row justify-content-center" ref={containerRef}>
+        {displayProducts()}
       </div>
     </div>
-  );
+     : 
+         <><a href='/auth'>To Access Marketplace Please Login</a></>
+    }
+</>
+
+)
+    
 }
+  
+export default Market

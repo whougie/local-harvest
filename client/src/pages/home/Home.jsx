@@ -2,6 +2,7 @@ import { useState } from 'react';
 import React from 'react'
 import './Home.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
+import { gsap } from "gsap";
 
 
 export default function Home(){
@@ -33,7 +34,7 @@ Incorporating locally sourced food into your diet doesn't have to be daunting. S
 
 
  <marquee behavior="scroll" direction="left">
-    <img src="https://shop.seedsavers.org/site/img/seo-images/1024-seed-savers-mixture-lettuce.jpg" alt="corn" className="homeImg"/>
+    <img src="../../public/images/mixture-lettuce.jpg" alt="lettuce mix" className="homeImg"/>
     <img src="https://images.squarespace-cdn.com/content/v1/53f2223ee4b0516cd60b393d/1408461079830-UCX14SSH8ORD2TWUT8GF/barnMorning.jpg" alt="chiles" className="homeImg"/>
     <img src="../../public/images/tomatoes.jpg" alt="tomatoes" className="homeImg"/>
     <img src="../../public/images/greenonionandcarrots.jpg" alt="green onions and" className='homeImg'/>

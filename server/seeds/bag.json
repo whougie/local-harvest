@@ -1,65 +1,79 @@
 [
     {
-        "id": "123abc",
-        "total": 66,
-        "isBagCheckedOut": "false"
-    },
-    {
-        "productPurchased": {
-            "id": "abc123"
+    
+        "id": "f1d2d2f924e986ac86fdf7b36",
+
+        
+        "isBagCheckedOut": true,
+    
+    
+        "total": 36,
+    
+    
+        "user":
+        {
+            "_id": "7e31bcf03d75a326a5573b7b"
+           
+        },
+    
+    
+        "productPurchased":
+        {
+            "_id":"ea688eb5a7cc4550647d281b"
         }
     },
+    
+
+
     {
-        "user": {
-            "id": "789",
-            "firstname": "John",
-            "lastname": "Wick",
-            "email": "john@gmail.com"
+    
+        "id": "07c652bb357f88673889e69b",
+        
+        
+        "isBagCheckedOut": false,
+    
+    
+        "total": 17.50,
+    
+    
+        "user":
+        {
+            "_id": "7e31bcf03d75a326a5573b7b"
+           
+        },
+    
+    
+        "productPurchased":
+        {
+            "_id":"870ed2059cbebc772793f729"
         }
+        
     },
+
+
     {
-        "id": "9",
-        "name": "Watermelon",
-        "price": "$4",
-        "qty": 30
-    },
-    {
-        "qtyPurchased": 3
-    },
-    {
-        "id": "3",
-        "name": "Roses",
-        "price": "$10",
-        "qty": 30
-    },
-    {
-        "qtyPurchased": 1
-    },
-    {
-        "id": "12",
-        "name": "Honey",
-        "price": "$8",
-        "qty": 15
-    },
-    {
-        "qtyPurchased": 3
-    },
-    {
-        "id": "6",
-        "name": "Strawberries",
-        "price": "$5",
-        "qty": 20
-    },
-    {
-        "qtyPurchased": 2
-    },
-    {
-        "id": "11",
-        "name": "Raspberries",
-        "price": "$5",
-        "qty": 20
-    },
-    {
-        "qtyPurchased": 2
+    
+        "id": "91957db713e8e64e96bdc286",
+        
+        "isBagCheckedOut": true,
+    
+    
+        "total": 10.50,
+    
+    
+        "user":
+        {
+            "_id": "7cba0bbf6256bfa781ee7db2"
+           
+        },
+    
+    
+        "productPurchased":
+        {
+            "_id":"27b3aa0af0ea77610e6566b7"
+        }
     }
+
 ]
+
+
