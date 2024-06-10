@@ -1,8 +1,15 @@
 .bag_box {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-evenly;
   margin-bottom: 20px; /* Add margin for spacing between bag items */
+  padding: 15px;
+  flex-direction:row;
+  font-size: 1.25rem;
+  border: 1px solid black ;
+  margin: 1rem;
+  background-color: forestgreen;
 }
 
 .cart_img {
@@ -24,4 +31,18 @@
 
 .btn-container button {
   margin: 0 5px; /* Add margin between buttons */
+}
+
+.total {
+  font-size: 1.25rem;
+  color: coral;
+  padding: 15px;
+}
+
+.checkout {
+  /* display: flex;
+  /* align-items: center;
+  justify-content:center; */ 
+  flex-direction:column;
+  
 }

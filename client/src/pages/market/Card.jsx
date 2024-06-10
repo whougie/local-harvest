@@ -31,7 +31,7 @@ export default function Card({ image, title, price, description }) {
                 <h3 className="card-title">{title}</h3>
                 <p className="card-description">{description}</p>
                 <p className="card-price">${price}</p>
-                <button className="card-button" id = {price} name={title} onClick={handleClick}>
+                <button className="card-button" id = {price} name={title} onClick={handleClick} >
                     Add to Bag
                 </button>
             </div>

@@ -31,8 +31,10 @@ function checkoutTotal (){
   }, [total]);
 
   const handleRemove = (i) => {
-    const arr = total.filter((item) => item.i !== i);
+    const arr = total.filter((item, index) => index !== i);
     setTotal(arr);
+    // Update local storage after removing the item
+  sessionStorage.setItem('cart', JSON.stringify(arr));
   };
 
   useEffect(() => {
@@ -40,11 +42,11 @@ function checkoutTotal (){
   }, [])
 
   return (
-    <article>
+    <article className='checkout'>
       {total && total.map((item, i) => (
-        <div className="bag_box" key={i}>
+        <div className="bag_box"  key={i}>
           <div className="cart_img">
-            {/* <img src={item.img} alt={item.title} /> */}
+            {/* <img src={item.image} alt={item.title} /> */}
             <p>{item.title}</p>
           </div>
           <div>
