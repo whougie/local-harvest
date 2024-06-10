@@ -6,7 +6,7 @@ import { useAppContext } from '../../providers/AppProviders';
 
 import bagImage from "../nav/bag2.png";
 import logo from "./localHavestLogo.png"
-// , setShow
+
 export default function Nav({ bagCount }) {
 const { setCurrentUser } = useAppContext();
 const [show, setShow] = useState(false);
