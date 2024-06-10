@@ -154,7 +154,7 @@ module.exports = {
     if (!user)
       res.status(401).json({ status: 'error', msg: 'Could not authenticate user' })
     else
-      res.status(200).json({ status: 'success' })
+      res.status(200).json({ status: 'success', payload: user })
 
   }
 

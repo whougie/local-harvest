@@ -26,7 +26,7 @@ export default function AppProvider(props){
         return setCurrentUser(null)
       }
       const foundUser = await response.json()
-      setCurrentUser(foundUser)
+      setCurrentUser(foundUser.payload);
     }
   }
 

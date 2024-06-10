@@ -42,18 +42,18 @@ function checkoutTotal (){
   }, [])
 
   return (
-    <article className='checkout'>
+    <article className='checkout container'>
       {total && total.map((item, i) => (
-        <div className="bag_box"  key={i}>
-          <div className="cart_img">
+        <div className="bag_box row text-center justify-content-center my-3"  key={i}>
+          <div className="col-md">
             {/* <img src={item.image} alt={item.title} /> */}
-            <p>{item.title}</p>
+            <span>Product Name: {item.title}</span>
           </div>
-          <div>
-            <button onClick={() => handleRemove(i)}>Remove</button>
+          <div className="col-md">
+            <button  onClick={() => handleRemove(i)}>Remove</button>
           </div>
-          <div>
-            <span>${item.price}</span>
+          <div className="col-md">
+            <span >Price: ${item.price}</span>
           </div>
         </div>
       ))}
