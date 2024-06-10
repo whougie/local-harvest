@@ -12,7 +12,7 @@ return(
        {/* <img src={logo} alt="Local Harvest Logo" className='logo' /> */}
     <Nav/>
     
-    <h1 className='projectName'>Local Farm</h1>
+    {/* <h1 className='projectName'>Local Farm</h1> */}
 
   </header>
 
