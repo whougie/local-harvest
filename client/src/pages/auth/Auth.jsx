@@ -11,7 +11,7 @@ export default function AuthPage() {
   const { setCurrentUser } = useAppContext();
 
   const navigate = useNavigate();
-
+// sets required fields for our login and signup functions.  
   const [formData, setFormData] = useState({
     firstname: "", lastname: "", signupEmail: "", signupPassword: "", loginEmail: "", loginPassword: ""
   })
@@ -26,7 +26,7 @@ export default function AuthPage() {
       [event.target.name]: event.target.value
     })
   }
-
+  // function to setup signing up for the site.  
   async function handleSignup(event) {
     event.preventDefault()
     try {
@@ -53,9 +53,9 @@ export default function AuthPage() {
     } catch (err) {
       console.log(err.message)
     }
-    // display a message to the user
-  }
 
+  }
+   //Fuction to handle login
   async function handleLogin(event) {
     event.preventDefault()
     try {
@@ -94,7 +94,7 @@ export default function AuthPage() {
         setCurrentUser(null);
         // Clear any client-side stored data (e.g., tokens)
         clearForms();
-        navigate("/home"); // Redirect to the home page after logout
+        window.location.href = "/market"; // Redirect to the home page after logout
       } else {
         throw new Error('Logout failed');
       }

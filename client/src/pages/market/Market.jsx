@@ -19,13 +19,16 @@ function Market() {
     .then( (data) => { setProducts(data)
     })
   }, [])
-
+// function to display products from our seed file.  
   function displayProducts() {
-    return (<>
-    {products.map((product, index) => <Card key={index} image={"/images/" + product.picture} title={product.name} price={product.price} />)}
+    return (
+    <>
+      {products && products.map((product, index) => (
+        <Card key={index} image={"/images/" + product.picture} title={product.name} price={product.price} />
+      ))}
     </>
-    )
-  }
+  );
+}
 
   // useGSAP( () => 
   //   { gsap.to('.productcard', { x: 2, y: 2, opacity: 1, stagger: 0.9 }); },

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
 import Cookie from "js-cookie";
@@ -7,8 +7,9 @@ import { useAppContext } from '../../providers/AppProviders';
 import bagImage from "../nav/bag2.png";
 import logo from "./localHavestLogo.png"
 
-export default function Nav({ bagCount, setShow }) {
+export default function Nav({ bagCount }) {
 const { setCurrentUser } = useAppContext();
+const [show, setShow] = useState(false);
 
   function logout(){
     setCurrentUser(null);
@@ -16,6 +17,8 @@ const { setCurrentUser } = useAppContext();
     window.location.href = "/"  
   console.log(logout + "worked?")
   }
+
+  //functional navigation links to direct to components of the application.
   return (
     <>
       <img src={logo} alt="Local Harvest Logo" className='logo' />

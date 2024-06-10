@@ -6,7 +6,7 @@ const Bag = ({ bag, setBag }) => {
 
   const handlePrice = () => {
     let ans = 0;
-    bag.forEach((item) => {
+    bag && bag.forEach((item) => {
       ans += item.amount * item.price;
     });
     setPrice(ans);
@@ -23,7 +23,7 @@ const Bag = ({ bag, setBag }) => {
 
   return (
     <article>
-      {bag.map((item) => (
+      {bag && bag.map((item) => (
         <div className="bag_box" key={item.id}>
           <div className="cart_img">
             <img src={item.img} alt={item.title} />
