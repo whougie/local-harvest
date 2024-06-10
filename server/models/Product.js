@@ -13,7 +13,9 @@ const productSchema = new Schema(
     },
     price: {
       type: Number,
-      required: true
+      required: true,
+      minlength: 1,
+      maxlength:4
     },
     qty: {
       type: Number,
