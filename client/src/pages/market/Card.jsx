@@ -13,7 +13,7 @@ export default function Card({ image, title, price, description }) {
         console.log("Item added to cart:", title);
 
     // function addToCart(e) {
-        total.push({ price: e.target.id, title: e.target.name, quantity: 1 })
+        total.push({ price: e.target.id, title: e.target.name, quantity: 1, image: image })
         setCart(total)
         // window.location.href = '/bag'
     // }
