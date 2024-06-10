@@ -13,16 +13,19 @@
   background-repeat: no-repeat;
 }
 
+/* Get involve button */
 .homebtn {
   display: flex;
   padding: 10px 20px; 
+  justify-content: center;
   background-color: #ed5c0b;
   color: #fff;
   border: none;
   margin-bottom: 30px;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   margin-left: 190px;
+  margin-right: 100px;
   outline: none;
   justify-items: center;
 }
@@ -46,7 +49,7 @@
 }
 
 .homeImg {
-  margin: 1rem;
+  margin: 0%;
   height: 15rem;
   width: 18rem;
   border-radius: 10%;
@@ -75,6 +78,8 @@
  justify-content: center;
  background-color: bisque;
 }
+
+/* first image on the left man on truck */
 .farmTruck{
   display: flex;
   margin-top: 40px;
@@ -121,4 +126,27 @@ background-color: #0056b3;
   margin-top: 40px;
   text-align: justify;
 
+}
+
+@media only screen and (max-width: 600px) {
+  .blog{
+    flex-direction: column;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1228px) {
+  .blog{
+    flex-direction: column;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1228px) {
+  .secondArticle{
+    display: flex;
+    margin-left: 100px;
+   justify-content: center;
+    font-size: 25px;
+  }
 }

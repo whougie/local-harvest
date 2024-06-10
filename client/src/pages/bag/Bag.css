@@ -25,3 +25,11 @@
 .btn-container button {
   margin: 0 5px; /* Add margin between buttons */
 }
+
+@media (min-width: 1107px) {
+  .bag_box  {
+    font-size: 1rem;
+    margin: -80px;
+    padding: 10px 15px;
+  }
+}

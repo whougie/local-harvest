@@ -15,8 +15,7 @@ return(
     {/* <h1 className='projectName'>Local Farm</h1> */}
 
   </header>
-
- 
-
 )
 }
+
+
