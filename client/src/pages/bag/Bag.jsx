@@ -1,46 +1,65 @@
 import React, { useEffect, useState } from 'react';
+// import { useShoppingCart } from "../../providers/ShoppingCartContext"
 import './Bag.css';
 
-const Bag = ({ bag, setBag }) => {
+
+const Bag = () => {
   const [price, setPrice] = useState(0);
 
+const [total, setTotal] =useState()
+
+function checkoutTotal (){
+  if(sessionStorage.getItem('cart')){
+    const storage =sessionStorage.getItem('cart')
+    if(storage){
+      setTotal(JSON.parse(storage))
+      console.log(storage)
+    }
+  }
+}
+    
   const handlePrice = () => {
     let ans = 0;
-    bag && bag.forEach((item) => {
-      ans += item.amount * item.price;
+    total && total.forEach((item) => {
+      ans += item.quantity * item.price;
     });
     setPrice(ans);
   };
 
   useEffect(() => {
     handlePrice();
-  }, [bag]);
+  }, [total]);
 
-  const handleRemove = (id) => {
-    const arr = bag.filter((item) => item.id !== id);
-    setBag(arr);
+  const handleRemove = (i) => {
+    const arr = total.filter((item, index) => index !== i);
+    setTotal(arr);
+    // Update local storage after removing the item
+  sessionStorage.setItem('cart', JSON.stringify(arr));
   };
 
+  useEffect(() => {
+    checkoutTotal()
+  }, [])
+
   return (
-    <article>
-      {bag && bag.map((item) => (
-        <div className="bag_box" key={item.id}>
+    <article className='checkout'>
+      {total && total.map((item, i) => (
+        <div className="bag_box"  key={i}>
           <div className="cart_img">
-            <img src={item.img} alt={item.title} />
+            {/* <img src={item.image} alt={item.title} /> */}
             <p>{item.title}</p>
           </div>
           <div>
-            <button onClick={() => handleRemove(item.id)}>Remove</button>
+            <button onClick={() => handleRemove(i)}>Remove</button>
           </div>
           <div>
-            <span>{item.price}</span>
-            <span>{item.amount}</span>
+            <span>${item.price}</span>
           </div>
         </div>
       ))}
       <div className='total'>
         <span>Total Price of your Bag</span>
-        <span>Rs - {price}</span>
+        <span> $  {price}</span>
       </div>
     </article>
   );

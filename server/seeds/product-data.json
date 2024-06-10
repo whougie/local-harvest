@@ -91,7 +91,7 @@
     {
       "product_id":"66b053d9ada10a3f4e11c40e",
       "name": "Honey",
-      "price": 7.99,
+      "price": 7.5,
       "qty":500,
       "picture":"honey.jpg",
       "description":"Experience the golden goodness of our pure, raw honey! Harvested from our hives and carefully extracted, our honey is a natural sweetener that's as wholesome as it is delicious. Drizzle it over toast, stir it into tea, or use it to sweeten your favorite recipes."
@@ -114,7 +114,7 @@
     },
     {
       "product_id":"c7f20c451e99999dbb7d24ba",
-      "name": "beets",
+      "name": "Beets",
       "price": 1.50,
       "qty":500,
       "picture":"beets.jpg",
