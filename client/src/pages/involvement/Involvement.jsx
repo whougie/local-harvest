@@ -197,7 +197,7 @@ export default function Involvement() {
           </form>
         ) : (
           <div className="submission-message">
-            <p>Thank you for your request! You’ll be contacted within a business day.</p>
+            <p>Thank you for your request! The Local Harvest team will be intouch with you.</p>
           </div>
         )}
         <div className="contact-info">
