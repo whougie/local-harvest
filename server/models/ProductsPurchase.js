@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-// const date = require('date-and-time');
 
 const productsPurchaseSchema = new Schema(
   {
@@ -33,9 +32,7 @@ const productsPurchaseSchema = new Schema(
   }
 );
 
-
 productsPurchaseSchema.virtual('productCount').get(function() {
-// Need some code to maybe be more specific of the items being added for product inventory
   return this.purchase.length;
 })
 

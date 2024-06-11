@@ -34,17 +34,6 @@ userSchema.pre("save", async function(next){
   next()
 })
 
-// Not working for the time being, but we shouldn't need this to work for the project
-// userSchema.pre("findOneAndUpdate", async function(next){
-//   console.log("In update")
-  
-//   console.log(this.password)
-//   console.log(this.email)
-
-//   this.password = await bcrypt.hash(this.password, 10);
-//   next()
-// })
-
 const User = model('user', userSchema);
 
 module.exports = User;

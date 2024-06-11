@@ -11,7 +11,7 @@ export default function AuthPage() {
   const { setCurrentUser } = useAppContext();
 
   const navigate = useNavigate();
-// sets required fields for our login and signup functions.  
+  // sets required fields for our login and signup functions.  
   const [formData, setFormData] = useState({
     firstname: "", lastname: "", signupEmail: "", signupPassword: "", loginEmail: "", loginPassword: ""
   })
@@ -30,11 +30,11 @@ export default function AuthPage() {
   async function handleSignup(event) {
     event.preventDefault()
     try {
-       console.log(formData)
+      console.log(formData)
       const response = await fetch("/api/users", {
         method: 'POST',
         body: JSON.stringify({
-          firstname:formData.firstname,
+          firstname: formData.firstname,
           lastname: formData.lastname,
           email: formData.signupEmail,
           password: formData.signupPassword
@@ -47,7 +47,7 @@ export default function AuthPage() {
       const result = await response.json()
       clearForms()
       if (result.status === 'success') {
-        window.location.href="/market";
+        window.location.href = "/market";
       }
       console.log(result)
     } catch (err) {
@@ -55,7 +55,7 @@ export default function AuthPage() {
     }
 
   }
-   //Fuction to handle login
+  //Fuction to handle login
   async function handleLogin(event) {
     event.preventDefault()
     try {
@@ -72,7 +72,7 @@ export default function AuthPage() {
       const result = await response.json()
       clearForms()
       if (result.status === 'success') {
-        window.location.href="/market";
+        window.location.href = "/market";
       }
     } catch (err) {
       console.log(err.message)
@@ -123,8 +123,7 @@ export default function AuthPage() {
 
         <button type="submit" className='authBtn'>Submit</button>
       </form>
-
-
+      
       <h2 className='authTitle'>Login Form </h2>
       <form onSubmit={handleLogin} className='loginForm'>
         <label>Email</label>
@@ -135,10 +134,6 @@ export default function AuthPage() {
 
         <button type="submit" className='authBtn'>Submit</button>
       </form>
-
-      {/* <form id="logoutForm" onSubmit={handleLogout} className='logoutForm'>
-        <button type="submit" className='authBtn'>Logout</button>
-      </form> */}
 
     </div>
   )

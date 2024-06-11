@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ReactDOM from "react-dom";
 import './App.css';
 import { gsap } from "gsap";
+import { ShoppingCartProvider } from "./providers/ShoppingCartContext";
 
 import Header from './components/header/Header';
 import About from './pages/about/About';
@@ -14,11 +16,13 @@ import Home from "./pages/home/Home";
 
 import AppProvider from "./providers/AppProviders";
 
-
+//Application routes for overall application.  
 export default function App() {
   const [count, setCount] = useState(0);
 
   return (
+    
+    <ShoppingCartProvider>
     <AppProvider>
     <div className='viewport'>
       <BrowserRouter>
@@ -35,5 +39,7 @@ export default function App() {
       </BrowserRouter>
     </div>
     </AppProvider>
+    </ShoppingCartProvider>
+   
   )
 }
