@@ -16,7 +16,7 @@ import Home from "./pages/home/Home";
 
 import AppProvider from "./providers/AppProviders";
 
-
+//Application routes for overall application.  
 export default function App() {
   const [count, setCount] = useState(0);
 

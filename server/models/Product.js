@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+//model for our products
 const productSchema = new Schema(
   {
     name: {
