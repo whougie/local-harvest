@@ -10,7 +10,7 @@ import logo from "./localHavestLogo.png"
 export default function Nav({ bagCount }) {
 const { setCurrentUser } = useAppContext();
 const [show, setShow] = useState(false);
-
+//logout function for Nav link
   function logout(){
     setCurrentUser(null);
     Cookie.remove('auth-cookie')
@@ -30,7 +30,7 @@ const [show, setShow] = useState(false);
           <NavLink to='/market'>Market</NavLink>
           <NavLink to='/involvement'>Get Involved</NavLink>
         </div>
-
+      {/* restricted access to components w/o sigin up or sign in */}
         <div className='iconBag' onClick={() => setShow(true)}>
           <NavLink to='/bag' className="bag">
             Bag {bagCount > 0 && <span className="bag-count">{bagCount}</span>}
@@ -42,7 +42,7 @@ const [show, setShow] = useState(false);
         </div>
 
         <ul>
-          {/* Optional content */}
+         
         </ul>
 
         <div className='auth'>

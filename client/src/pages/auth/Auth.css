@@ -11,9 +11,6 @@ background-size: cover;
 background-repeat: no-repeat;
 margin: 1rem;
 padding: 10%;
-
-
-
 }
 
 .authTitle {
@@ -33,8 +30,6 @@ padding: 10%;
   background-color: #F0F8FF;
   border-radius: 6px;
   position: relative;
-  
-  
 }
 
 .loginForm {
@@ -47,7 +42,6 @@ padding: 10%;
   align-items: center;
   background-color: #F0F8FF;
   border-radius: 6px;
- 
 }
 
 .authBtn{

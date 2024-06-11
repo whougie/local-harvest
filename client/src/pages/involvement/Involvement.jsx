@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Involvement.css';
 
+//Involvement function and form information
 export default function Involvement() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -34,7 +35,7 @@ export default function Involvement() {
     e.preventDefault();
     // Log form data to console
     console.log('Form Data:', formData);
-    // Pretend to submit form
+
     setFormSubmitted(true);
   };
 

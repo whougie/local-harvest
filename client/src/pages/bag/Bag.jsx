@@ -50,7 +50,6 @@ const Bag = () => {
 
         <div className="bag_box row text-center justify-content-center my-3"  key={i}>
           <div className="col-md">
-            {/* <img src={item.image} alt={item.title} />  */}
             <span>Product Name: {item.title}</span>
 
           </div>

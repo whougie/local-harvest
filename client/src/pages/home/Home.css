@@ -6,8 +6,6 @@
   align-items: center;
   height: 20rem;
   max-width: 100%;
-
-  /* background image */
   background-image: url(../../assets/images/hero3.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -31,18 +29,15 @@
   background-color: #0056b3;
 }
 
-
 .harvest {
   font-size: 2rem;
   color: black;
   padding: 1rem;
-
 }
 
 .farm {
   font-size: 1.5rem;
-  color: black;
- 
+  color: black; 
 }
 
 .homeImg {
@@ -52,7 +47,6 @@
   border-radius: 10%;
 }
 
-
 /* image of man on truck and text area on the right*/
 .blog{
   display: flex;
@@ -61,8 +55,8 @@
   margin: 40px;
   gap: 20px;
   width:fit-content;
- 
 }
+
 /* block of text on the right */
 .text2{
   margin-left: 0;
@@ -101,18 +95,17 @@
 background-color: #0056b3;
 }
 
-
 .farm{
   color: #fff;
   font-size: 20px;
   padding: 20px;
   text-shadow: grey(92, 116, 151);
 }
+
 .farmTitle{
   color: #ed5c0b;
   font-size: 26px;
 }
-
 
 .secondArticle{
   display: flex;
@@ -120,5 +113,4 @@ background-color: #0056b3;
   margin-left: 20rem;
   margin-top: 40px;
   text-align: justify;
-
 }
