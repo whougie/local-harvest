@@ -149,13 +149,13 @@ export default function Involvement() {
             </div>
             <div className="form-group">
               <label htmlFor="questions">Questions:</label>
-              <p>
+              <div>
               <br />
                 <span style={{ color: '#888', fontSize: 'small' }}>
                 Ask us anything you'd like to know about our business. We thrive on mutual trust between us, our customers, and vendors.
               <br />
                 </span>
-              </p>
+              </div>
               <textarea
                 id="questions"
                 name="questions"

@@ -21,9 +21,9 @@ export default function Footer() {
         <div className='connect'>
        
           <p>Connect With Us</p>
-          <p> Email: contact@localharvest.com
-              <p>Phone: (123) 456-7890</p>
-              Address: 1234 Harvest Lane, Townsville, State, 56789</p>
+          <p> Email: contact@localharvest.com</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Address: 1234 Harvest Lane, Townsville, State, 56789</p>
         </div>
 
         <div className='copyright'>
