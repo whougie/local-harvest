@@ -1,27 +1,16 @@
-
-
-
 .footer {
-  /* min-height: calc(100vh - 200px); */
-  background-color: #0e3053  ;
+  background-color: #0e3053;
   height: 400px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
 }
-
-/* .images {
-  display: flex;
-  justify-content:space-around;
-
-} */
 
 .logos {
   height: 3rem;
   width: 4rem;
   margin: 30px;
-
 }
 
 .copyright {
@@ -38,12 +27,12 @@
 }
 
 .footerImages {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
- 
+
 }
 
-.allfooter{
+.allfooter {
   display: flex;
 }
 

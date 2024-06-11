@@ -2,7 +2,7 @@ const { User, Product, ProductsPurchase, Bag } = require('../models');
 
 module.exports = {
   
-  // get all products
+  // Get all products
   async getProducts(req, res) {
     try {
       const products = await Product.find();
@@ -12,7 +12,7 @@ module.exports = {
     }
   },
   
-  // get single product
+  // Get single product
   async getSingleProduct(req, res) {
     try {
       const product = await Product.findOne({ _id: req.params.productId });
@@ -27,7 +27,7 @@ module.exports = {
     }
   },
   
-  // create a product
+  // Create a product
   async createProduct(req, res) {
     try {
       console.log(req.body)

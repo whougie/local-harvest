@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Involvement.css';
 
+//Involvement function and form information
 export default function Involvement() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -34,7 +35,7 @@ export default function Involvement() {
     e.preventDefault();
     // Log form data to console
     console.log('Form Data:', formData);
-    // Pretend to submit form
+
     setFormSubmitted(true);
   };
 
@@ -148,13 +149,13 @@ export default function Involvement() {
             </div>
             <div className="form-group">
               <label htmlFor="questions">Questions:</label>
-              <p>
+              <div>
               <br />
                 <span style={{ color: '#888', fontSize: 'small' }}>
                 Ask us anything you'd like to know about our business. We thrive on mutual trust between us, our customers, and vendors.
               <br />
                 </span>
-              </p>
+              </div>
               <textarea
                 id="questions"
                 name="questions"

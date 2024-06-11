@@ -2,7 +2,7 @@ const {User, Product, ProductsPurchase, Bag} = require('../models');
 
 module.exports = {
   
-  // get all productsPurchases
+  // Get all productsPurchases
   async getProductsPurchases(req, res) {
     try {
       const productsPurchases = await ProductsPurchase.find().populate(
@@ -21,7 +21,7 @@ module.exports = {
   },
   
   
-  // get single productsPurchase
+  // Get single productsPurchase
   async getSingleProductsPurchase(req, res) {
     try {
       const productsPurchase = await ProductsPurchase.findOne( { _id: req.params.productsPurchaseId }  ).populate('user').populate(
@@ -44,7 +44,7 @@ module.exports = {
     }
   },
   
-  // create a productsPurchase
+  // Create a productsPurchase
   async createProductsPurchase(req, res) {
     try {
       const productsPurchase = await ProductsPurchase.create(req.body);
