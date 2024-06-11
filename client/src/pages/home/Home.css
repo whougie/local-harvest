@@ -119,3 +119,27 @@ background-color: #0056b3;
   margin-top: 40px;
   text-align: justify;
 }
+
+
+@media only screen and (max-width: 600px) {
+  .blog{
+    flex-direction: column;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1228px) {
+  .blog{
+    flex-direction: column;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1228px) {
+  .secondArticle{
+    display: flex;
+    margin-left: 100px;
+   justify-content: center;
+    font-size: 25px;
+  }
+}
