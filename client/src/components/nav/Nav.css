@@ -103,8 +103,16 @@ nav {
 }
 
 
+
+
+@media (max-width: 1293px) {
+  .bag {
+     margin-left: 70%;
+    }
+  }
 @media (max-width: 1293px) {
 .bag {
    margin-left: 70%;
   }
 }
+
