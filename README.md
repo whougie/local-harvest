@@ -67,16 +67,16 @@ These grades will be seen ONLY by instructional staff
 Below is a screen shot of the Home Page (Desktop), AboutUs Page, Market & Get Involved Page.
 
 The Home Page.
-![The Home Page.](../local-harvest/client/src/assets/images/home.png)
+![The Home Page.](./client/src/assets/images/home.png)
 
 The AboutUs Page.
-![The AboutUs Page.](../local-harvest/client/src/assets/images/about.png)
+![The AboutUs Page.](./client/src/assets/images/about.png)
 
 The Market Page.
-![The Market Page.](../local-harvest/client/src/assets/images/market.png)
+![The Market Page.](./client/src/assets/images/market.png)
 
 The Get Involved Page.
-![The AboutUs Page.](../local-harvest/client/src/assets/images/getinvolved.png)
+![The AboutUs Page.](./client/src/assets/images/getinvolved.png)
 
 
 The Presentation.
@@ -110,7 +110,7 @@ The Presentation.
 
 - New Technology Stack
     -Gsap Stagger from [gsap.com](https://gsap.com/resources/getting-started/Staggers/)
-    -SplitType from (https://www.npmjs.com/package/split-type
+- SplitType from (https://www.npmjs.com/package/split-type
     )
 
 <br>
