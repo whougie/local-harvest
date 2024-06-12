@@ -16,14 +16,9 @@ function Market() {
   useEffect(() => {
     fetch('/api/products')
     .then( (response) => response.json())
-    .then( (data) => { setProducts(data);
-      gsap.to('.productcard', { x: 2, y: 2, opacity: 1, stagger: 0.9 });
+    .then( (data) => { setProducts(data)
     })
-
-  
   }, [])
-
-  
 // function to display products from our seed file and call-in the Card.jsx file for products.  
   function displayProducts() { 
     return (
@@ -34,6 +29,11 @@ function Market() {
     </>
   );
 }
+// Tech package Kee was working on...didn't delete incase he needed it to fix. JH
+  // useGSAP( () => 
+  //   { gsap.to('.productcard', { x: 2, y: 2, opacity: 1, stagger: 0.9 }); },
+  //   { scope: containerRef }
+  // );
   
     return (
 
