@@ -64,21 +64,23 @@ These grades will be seen ONLY by instructional staff
 
 ## Media Attachments
 
-Below is a screen shot of the Home Page (Desktop & Mobile), AboutUs Page, & Market.
-![Below is a screen shot of the Home Page (Desktop & Mobile), Results Page, & Market.]()
-![]()
+Below is a screen shot of the Home Page (Desktop), AboutUs Page, Market & Get Involved Page.
 
 The Home Page.
-![The Results Page.]()
-
-The Market Page.
-![The Market Page.]()
+![The Home Page.](../local-harvest/client/src/assets/images/home.png)
 
 The AboutUs Page.
-![The AboutUs Page.]()
+![The AboutUs Page.](../local-harvest/client/src/assets/images/about.png)
+
+The Market Page.
+![The Market Page.](../local-harvest/client/src/assets/images/market.png)
+
+The Get Involved Page.
+![The AboutUs Page.](../local-harvest/client/src/assets/images/getinvolved.png)
+
 
 The Presentation.
-[Click Here]() 
+[Click Here](https://docs.google.com/presentation/d/1N5yuJ6h-Y7GNsJnzsXVOtqGa2kDZ-UAMI6lU7HDtgQ8/edit#slide=id.p) 
 
 ## Our Company: Code Crusaders.
 - Daisy
@@ -91,9 +93,9 @@ The Presentation.
 
 - Technology Stack
     - MongoDB
-    - Express
-    - React
-    - Node 
+    - Express.js
+    - React.js
+    - Node.js 
 
 - CSS
    - Custom CSS
@@ -107,7 +109,9 @@ The Presentation.
 <br>
 
 - New Technology Stack
-    -
+    -Gsap Stagger from [gsap.com](https://gsap.com/resources/getting-started/Staggers/)
+    -SplitType from (https://www.npmjs.com/package/split-type
+    )
 
 <br>
 
@@ -123,7 +127,7 @@ The Presentation.
 
 
 ## Deployed Application:
-[Click Here]() to view the Repository for this project.
+[Click Here](https://github.com/whougie/local-harvest) to view the Repository for this project.
 
 [Click Here]() to view the deployed version of the web application. 
 
