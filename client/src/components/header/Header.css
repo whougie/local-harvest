@@ -1,8 +1,5 @@
-
-
 .header {
-  position: relative;
-  max-width: 100%;
+  width: 100%;
   height: 400px;
   background-image: url(/images/headerImage.jpg);
   background-repeat: no-repeat;
@@ -21,21 +18,3 @@
  
   }
   
-
-  @media only screen and (max-width: 293px) {
-    .header{
-      margin: 100%;
-      max-width: 100%;
-      padding: auto;
-    }
-  }
-  
-  @media only screen and (max-width: 917px) {
-    .header{
-      margin: auto;
-      max-width: 100%;
-   
-    }
-  }
-
-

@@ -22,7 +22,7 @@ export default function Card({ image, title, price, description }) {
     }, [cart])
 
     return (
-        <div className="productcard col-3 m-2 p-2 text-center">
+        <div className="card col-3 m-2 p-2 text-center">
             <img src={image} alt={title} className="card-image card-img-top" />
             <div className="card-content">
                 <h3 className="card-title">{title}</h3>
